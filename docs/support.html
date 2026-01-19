@@ -264,6 +264,23 @@
     </footer>
 
     <script>
+        const backToTopBtn = document.getElementById('backToTop');
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-lg', 'shadow-black/20');
+            } else {
+                navbar.classList.remove('shadow-lg', 'shadow-black/20');
+            }
+        });
+
         const SUPABASE_URL = 'https://jhczmzdsorsxhfiltqta.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoY3ptemRzb3JzeGhmaWx0cXRhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDcwMTUsImV4cCI6MjA4MjcyMzAxNX0.QuVTlvFGeEffqZVWemuZhIFqIs0V9erxqXyFyEhHWe8';
         const RATE_LIMIT_KEY = 'feedback_submissions';
