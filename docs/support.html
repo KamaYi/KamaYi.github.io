@@ -50,12 +50,16 @@
         </div>
     </header>
 
-    <nav class="flex justify-center gap-2 md:gap-4 p-4 bg-surface border-b border-border flex-wrap">
-        <a href="index.html" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Home</a>
-        <a href="privacy.html" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Privacy Policy</a>
-        <a href="terms.html" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Terms of Service</a>
-        <a href="support.html" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary">Support</a>
+    <nav id="navbar" class="sticky top-0 z-50 flex justify-center gap-1 sm:gap-2 p-3 bg-surface/95 backdrop-blur-md border-b border-border transition-shadow">
+        <a href="index.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Home</a>
+        <a href="privacy.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Privacy</a>
+        <a href="terms.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Terms</a>
+        <a href="support.html" class="text-slate-100 bg-primary text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap">Support</a>
     </nav>
+
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg shadow-primary/25 flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+    </button>
 
     <main class="relative max-w-4xl mx-auto px-6 py-12">
         <div class="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
