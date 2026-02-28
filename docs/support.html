@@ -9,6 +9,7 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="i18n.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -38,10 +39,10 @@
             <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
                 <span class="text-5xl">💊</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
+            <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
                 Time Capsule
             </h1>
-            <p class="text-slate-300 text-lg font-light tracking-wide">Support Center</p>
+            <p data-i18n="nav-support" class="text-slate-300 text-lg font-light tracking-wide">Support Center</p>
             <div class="mt-6 flex justify-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse delay-100"></span>
@@ -50,11 +51,15 @@
         </div>
     </header>
 
-    <nav id="navbar" class="sticky top-0 z-50 flex justify-center gap-1 sm:gap-2 p-3 bg-surface/95 backdrop-blur-md border-b border-border transition-shadow">
-        <a href="index.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Home</a>
-        <a href="privacy.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Privacy</a>
-        <a href="terms.html" class="text-slate-400 text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary whitespace-nowrap">Terms</a>
-        <a href="support.html" class="text-slate-100 bg-primary text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap">Support</a>
+    <nav class="flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface border-b border-border flex-wrap">
+        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Home</a>
+        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Privacy Policy</a>
+        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Terms of Service</a>
+        <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary">Support</a>
+        <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
+            <span>🌐</span>
+            <span>中文</span>
+        </button>
     </nav>
 
     <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg shadow-primary/25 flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none">
@@ -68,13 +73,13 @@
         <div class="relative">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-1 h-8 bg-gradient-to-b from-primary to-violet-500 rounded-full"></div>
-                <h1 class="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">How can we help?</h1>
+                <h1 data-i18n="support-q-title" class="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">How can we help?</h1>
             </div>
-            <p class="text-slate-400 text-sm mb-8 pb-6 border-b border-border/50">Find answers to common questions or contact us</p>
+            <p data-i18n="support-q-desc" class="text-slate-400 text-sm mb-8 pb-6 border-b border-border/50">Find answers to common questions or contact us</p>
 
             <div class="flex items-center gap-3 mt-8 mb-6">
                 <span class="text-xl">❓</span>
-                <h2 class="text-2xl font-semibold">Frequently Asked Questions</h2>
+                <h2 data-i18n="support-faq-title" class="text-2xl font-semibold">Frequently Asked Questions</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
 
@@ -170,10 +175,10 @@
 
             <div class="flex items-center gap-3 mt-12 mb-6">
                 <span class="text-xl">📧</span>
-                <h2 class="text-2xl font-semibold">Contact Us</h2>
+                <h2 data-i18n="contact-title" class="text-2xl font-semibold">Contact Us</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
-        <p class="text-slate-400 mb-4">Still need help? We're here for you!</p>
+        <p data-i18n="contact-desc-alt" class="text-slate-400 mb-4">Still need help? We're here for you!</p>
 
         <div class="relative overflow-hidden bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-8 my-8">
             <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -185,8 +190,8 @@
                     </svg>
                 </div>
                 <div class="flex-1 text-center md:text-left">
-                    <h3 class="text-xl font-semibold text-slate-100 mb-1">Get in Touch</h3>
-                    <p class="text-slate-400 text-sm">For questions, feedback, or bug reports - we respond quickly!</p>
+                    <h3 data-i18n="contact-get-in-touch" class="text-xl font-semibold text-slate-100 mb-1">Get in Touch</h3>
+                    <p data-i18n="contact-desc-fast" class="text-slate-400 text-sm">For questions, feedback, or bug reports - we respond quickly!</p>
                 </div>
                 <a href="mailto:shanglan4444@gmail.com" class="group flex items-center gap-2 bg-gradient-to-r from-primary to-violet-500 text-white px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
                     <span>shanglan4444@gmail.com</span>
@@ -199,14 +204,14 @@
 
         <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-5 my-6">
             <h4 class="text-cyan-400 font-semibold mb-2 flex items-center gap-2">
-                <span>💡</span> Tip: Help Us Help You
+                <span>💡</span> <span data-i18n="support-tip-title">Tip: Help Us Help You</span>
             </h4>
-            <p class="text-slate-400 text-sm">When reporting issues, include your device model and app version for faster support!</p>
+            <p data-i18n="support-tip-desc" class="text-slate-400 text-sm">When reporting issues, include your device model and app version for faster support!</p>
         </div>
 
             <div class="flex items-center gap-3 mt-12 mb-6">
                 <span class="text-xl">📝</span>
-                <h2 class="text-2xl font-semibold">Submit Feedback</h2>
+                <h2 data-i18n="support-feedback-title" class="text-2xl font-semibold">Submit Feedback</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
 
@@ -214,7 +219,7 @@
             <div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <form id="feedbackForm" class="relative space-y-5">
                 <div>
-                    <label class="block text-slate-200 font-medium mb-2">Description <span class="text-red-400">*</span></label>
+                    <label data-i18n="support-form-desc" class="block text-slate-200 font-medium mb-2">Description <span class="text-red-400">*</span></label>
                     <textarea 
                         id="feedbackDesc" 
                         rows="4" 
@@ -224,7 +229,7 @@
                     ></textarea>
                 </div>
                 <div>
-                    <label class="block text-slate-200 font-medium mb-2">Your Email <span class="text-red-400">*</span></label>
+                    <label data-i18n="support-form-email" class="block text-slate-200 font-medium mb-2">Your Email <span class="text-red-400">*</span></label>
                     <input 
                         type="email" 
                         id="feedbackEmail" 
@@ -242,29 +247,29 @@
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                     </svg>
-                    Submit Feedback
+                    <span data-i18n="support-form-submit">Submit Feedback</span>
                 </button>
             </form>
         </div>
 
             <div class="flex items-center gap-3 mt-12 mb-6">
                 <span class="text-xl">📱</span>
-                <h2 class="text-2xl font-semibold">App Information</h2>
+                <h2 data-i18n="support-info-title" class="text-2xl font-semibold">App Information</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/30">
-                <h4 class="text-slate-500 text-xs uppercase tracking-wide mb-1">Version</h4>
+                <h4 data-i18n="support-info-version" class="text-slate-500 text-xs uppercase tracking-wide mb-1">Version</h4>
                 <p class="text-slate-100 font-medium text-lg">1.0.0</p>
             </div>
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/30">
-                <h4 class="text-slate-500 text-xs uppercase tracking-wide mb-1">Requires</h4>
+                <h4 data-i18n="support-info-req" class="text-slate-500 text-xs uppercase tracking-wide mb-1">Requires</h4>
                 <p class="text-slate-100 font-medium text-lg">iOS 14.0+</p>
             </div>
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/30">
-                <h4 class="text-slate-500 text-xs uppercase tracking-wide mb-1">Languages</h4>
-                <p class="text-slate-100 font-medium text-lg">English, Chinese</p>
+                <h4 data-i18n="support-info-langs" class="text-slate-500 text-xs uppercase tracking-wide mb-1">Languages</h4>
+                <p data-i18n="support-info-langs-val" class="text-slate-100 font-medium text-lg">English, Chinese</p>
             </div>
         </div>
         </div>
@@ -272,16 +277,15 @@
 
     <footer class="text-center py-8 px-6 border-t border-border text-slate-400 text-sm">
         <div class="flex justify-center gap-5 mb-3 flex-wrap">
-            <a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="support.html" class="hover:text-primary transition-colors">Support</a>
+            <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
         </div>
-        <p>© 2026 Time Capsule. All rights reserved.</p>
+        <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
     </footer>
 
     <script>
         const backToTopBtn = document.getElementById('backToTop');
-        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
@@ -289,11 +293,6 @@
             } else {
                 backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
                 backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
-            }
-            if (window.scrollY > 100) {
-                navbar.classList.add('shadow-lg', 'shadow-black/20');
-            } else {
-                navbar.classList.remove('shadow-lg', 'shadow-black/20');
             }
         });
 
