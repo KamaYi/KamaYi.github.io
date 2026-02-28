@@ -46,251 +46,299 @@
         </div>
     </header>
 
-    <nav class="flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface border-b border-border flex-wrap">
-        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Home</a>
-        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary">Privacy Policy</a>
-        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Terms of Service</a>
-        <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Support</a>
+    <nav class="sticky top-0 z-50 flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface/80 backdrop-blur-md border-b border-border flex-wrap transition-all duration-300">
+        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Privacy Policy</a>
+        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms of Service</a>
+        <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
         <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
             <span>🌐</span>
             <span>中文</span>
         </button>
     </nav>
+
+    <main class="relative max-w-4xl mx-auto px-6 py-12">
+        <div class="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/3 left-0 w-64 h-64 bg-violet-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="relative">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-1 h-8 bg-gradient-to-b from-primary to-violet-500 rounded-full"></div>
                 <h1 data-i18n="privacy-title" class="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">Privacy Policy</h1>
             </div>
             <p data-i18n="privacy-last-updated" class="text-slate-400 text-sm mb-8 pb-6 border-b border-border/50">Last updated: January 2026</p>
 
-            <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10">
+            <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10 shadow-xl shadow-primary/5">
                 <div class="absolute top-4 right-4 w-16 h-16 bg-primary/10 rounded-full blur-xl"></div>
-                <p data-i18n="privacy-intro" class="relative text-slate-300 leading-relaxed">
+                <p data-i18n="privacy-intro" class="relative text-slate-300 leading-relaxed text-lg">
                     Time Capsule ("we," "our," or "us") is committed to protecting your privacy.
                     This Privacy Policy explains how we collect, use, and safeguard your information
                     when you use our mobile application.
                 </p>
             </div>
 
-            <div class="flex items-center gap-3 mt-10 mb-4">
-                <span class="text-xl">📋</span>
-                <h2 data-i18n="privacy-sect1" class="text-2xl font-semibold">1. Information We Collect</h2>
-                <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
+            <div class="space-y-12">
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">📋</span>
+                        <h2 data-i18n="privacy-sect1" class="text-2xl font-semibold">1. Information We Collect</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 data-i18n="privacy-personal-info" class="text-lg font-medium mb-3 text-primary/90 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                Personal Information You Provide
+                            </h3>
+                            <ul class="text-slate-400 pl-6 list-disc space-y-3">
+                                <li><strong data-i18n="privacy-acc-info" class="text-slate-200">Account Information:</strong> <span data-i18n="privacy-acc-info-val">Email address and password</span></li>
+                                <li><strong data-i18n="privacy-prof-info" class="text-slate-200">Profile Information:</strong> <span data-i18n="privacy-prof-info-val">Username and profile photo (optional)</span></li>
+                                <li><strong data-i18n="privacy-user-content" class="text-slate-200">User Content:</strong> <span data-i18n="privacy-user-content-val">Text, photos, and audio you create in capsules</span></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 data-i18n="privacy-auto-info" class="text-lg font-medium mb-3 text-primary/90 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                Information Collected Automatically
+                            </h3>
+                            <ul class="text-slate-400 pl-6 list-disc space-y-3">
+                                <li><strong data-i18n="privacy-dev-info" class="text-slate-200">Device Information:</strong> <span data-i18n="privacy-dev-info-val">Device type, operating system</span></li>
+                                <li><strong data-i18n="privacy-usage-data" class="text-slate-200">Usage Data:</strong> <span data-i18n="privacy-usage-data-val">Features you use, app interactions</span></li>
+                                <li><strong data-i18n="privacy-loc-data" class="text-slate-200">Location Data:</strong> <span data-i18n="privacy-loc-data-val">Approximate location (if permitted)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">⚙️</span>
+                        <h2 data-i18n="privacy-sect2" class="text-2xl font-semibold">2. How We Use Your Information</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list1">Provide and maintain App functionality</span>
+                        </li>
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list2">Store and sync time capsules</span>
+                        </li>
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list3">Send notifications when capsules unlock</span>
+                        </li>
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list4">Respond to support requests</span>
+                        </li>
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list5">Improve user experience</span>
+                        </li>
+                        <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
+                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list6">Detect and prevent security issues</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">🔐</span>
+                        <h2 data-i18n="privacy-sect3" class="text-2xl font-semibold">3. Data Storage and Security</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    
+                    <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                        <h4 class="text-emerald-400 font-semibold mb-4 text-lg flex items-center gap-3">
+                            <span class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-base">🛡️</span>
+                            <span data-i18n="privacy-encryption">Data Encryption</span>
+                        </h4>
+                        <p data-i18n="privacy-encryption-desc" class="text-slate-300 mb-6 leading-relaxed">
+                            Your data (including photos and wishes/messages) is stored with the following security measures:
+                        </p>
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="bg-surface/80 rounded-xl p-5 border border-border/50">
+                                <h5 data-i18n="privacy-transit" class="text-slate-100 font-semibold mb-2">In Transit</h5>
+                                <p data-i18n="privacy-transit-val" class="text-slate-400 text-sm">All data is encrypted using TLS/SSL during transmission between your device and our servers.</p>
+                            </div>
+                            <div class="bg-surface/80 rounded-xl p-5 border border-border/50">
+                                <h5 data-i18n="privacy-rest" class="text-slate-100 font-semibold mb-2">At Rest</h5>
+                                <p data-i18n="privacy-rest-val" class="text-slate-400 text-sm">Your capsule content (text, photos, audio) is stored on secure cloud servers provided by Supabase with server-side encryption enabled.</p>
+                            </div>
+                            <div class="bg-surface/80 rounded-xl p-5 border border-border/50">
+                                <h5 data-i18n="privacy-access" class="text-slate-100 font-semibold mb-2">Access Control</h5>
+                                <p data-i18n="privacy-access-val" class="text-slate-400 text-sm">Your data can only be accessed by your authenticated account. We use row-level security policies to ensure data isolation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-start gap-4 p-5 bg-amber-500/5 border border-amber-500/20 rounded-2xl">
+                        <span class="text-xl">⚠️</span>
+                        <div>
+                            <h4 data-i18n="privacy-note" class="text-amber-400 font-semibold mb-1">Note</h4>
+                            <p data-i18n="privacy-note-val" class="text-slate-400 text-sm">No method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">📦</span>
+                        <h2 data-i18n="privacy-sect4" class="text-2xl font-semibold">4. Data Retention Policy</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 transition-all hover:bg-surface/80">
+                            <h4 data-i18n="privacy-keep-sealed" class="text-primary font-semibold mb-3">Sealed Capsules</h4>
+                            <p data-i18n="privacy-keep-sealed-val" class="text-slate-400 text-sm leading-relaxed">Your capsule content is retained until the capsule unlocks and you choose to delete it, or until you delete your account.</p>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 transition-all hover:bg-surface/80">
+                            <h4 data-i18n="privacy-keep-unlocked" class="text-primary font-semibold mb-3">Unlocked Capsules</h4>
+                            <p data-i18n="privacy-keep-unlocked-val" class="text-slate-400 text-sm leading-relaxed">After a capsule unlocks, content remains accessible until you manually delete it.</p>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 transition-all hover:bg-surface/80">
+                            <h4 data-i18n="privacy-keep-acc" class="text-primary font-semibold mb-3">Account Data</h4>
+                            <p data-i18n="privacy-keep-acc-val" class="text-slate-400 text-sm leading-relaxed">Retained until you request account deletion.</p>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 transition-all hover:bg-surface/80">
+                            <h4 data-i18n="privacy-keep-deleted" class="text-primary font-semibold mb-3">Deleted Data</h4>
+                            <p data-i18n="privacy-keep-deleted-val" class="text-slate-400 text-sm leading-relaxed">When you delete content or your account, data is permanently removed from our servers within 30 days.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">📱</span>
+                        <h2 data-i18n="privacy-sect5" class="text-2xl font-semibold">5. App Permissions</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🖼️</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-photo" class="text-slate-100 font-semibold mb-2 text-lg">Photo Library Access</h4>
+                                <p data-i18n="privacy-perm-photo-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We request access to your Photo Library so you can select and add photos to your time capsules. 
+                                    We only access photos you explicitly select - we never scan or access your entire photo library.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🎤</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-mic" class="text-slate-100 font-semibold mb-2 text-lg">Microphone Access</h4>
+                                <p data-i18n="privacy-perm-mic-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We request microphone access to allow you to record voice messages for your capsules. 
+                                    Audio is only recorded when you actively press the record button.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔔</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-notif" class="text-slate-100 font-semibold mb-2 text-lg">Push Notifications</h4>
+                                <p data-i18n="privacy-perm-notif-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We use push notifications to alert you when your time capsules are ready to be opened. 
+                                    You can disable notifications in your settings at any time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">🔄</span>
+                        <h2 data-i18n="privacy-sect6" class="text-2xl font-semibold">6. Data Sharing</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <p data-i18n="privacy-sell" class="text-slate-100 font-bold mb-4 text-lg">We do not sell your personal information.</p>
+                    <div class="bg-surface/50 border border-border/50 rounded-2xl overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="bg-primary/10 border-b border-border">
+                                    <th data-i18n="privacy-table-service" class="px-6 py-4 font-semibold text-slate-100">Service</th>
+                                    <th data-i18n="privacy-table-purpose" class="px-6 py-4 font-semibold text-slate-100">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-border">
+                                <tr class="hover:bg-primary/5 transition-colors">
+                                    <td class="px-6 py-4 text-slate-300 font-medium">Supabase</td>
+                                    <td class="px-6 py-4 text-slate-400 text-sm">Database, Auth, Cloud Storage</td>
+                                </tr>
+                                <tr class="hover:bg-primary/5 transition-colors">
+                                    <td class="px-6 py-4 text-slate-300 font-medium">Expo</td>
+                                    <td class="px-6 py-4 text-slate-400 text-sm">Application Framework</td>
+                                </tr>
+                                <tr class="hover:bg-primary/5 transition-colors">
+                                    <td class="px-6 py-4 text-slate-300 font-medium">Apple APNs</td>
+                                    <td class="px-6 py-4 text-slate-400 text-sm">Push Notifications</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">⚖️</span>
+                        <h2 data-i18n="privacy-sect7" class="text-2xl font-semibold">7. Your Rights</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-surface/30 border border-border/50 rounded-xl p-5 flex items-start gap-4">
+                            <span class="text-primary font-bold">01.</span>
+                            <div>
+                                <h4 data-i18n="privacy-rights-access" class="text-slate-100 font-medium">Access</h4>
+                                <p data-i18n="privacy-rights-access-val" class="text-slate-400 text-sm mt-1">Request a copy of your data</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/30 border border-border/50 rounded-xl p-5 flex items-start gap-4">
+                            <span class="text-primary font-bold">02.</span>
+                            <div>
+                                <h4 data-i18n="privacy-rights-corr" class="text-slate-100 font-medium">Correction</h4>
+                                <p data-i18n="privacy-rights-corr-val" class="text-slate-400 text-sm mt-1">Update your info in Settings</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/30 border border-border/50 rounded-xl p-5 flex items-start gap-4">
+                            <span class="text-primary font-bold">03.</span>
+                            <div>
+                                <h4 data-i18n="privacy-rights-del" class="text-slate-100 font-medium">Deletion</h4>
+                                <p data-i18n="privacy-rights-del-val" class="text-slate-400 text-sm mt-1">Delete your account in Settings</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/30 border border-border/50 rounded-xl p-5 flex items-start gap-4">
+                            <span class="text-primary font-bold">04.</span>
+                            <div>
+                                <h4 data-i18n="privacy-rights-opt" class="text-slate-100 font-medium">Opt-Out</h4>
+                                <p data-i18n="privacy-rights-opt-val" class="text-slate-400 text-sm mt-1">Disable notifications in settings</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="border-t border-border pt-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 data-i18n="privacy-sect12" class="text-xl font-semibold mb-4 text-slate-100 underline decoration-primary underline-offset-8">12. Policy Changes</h3>
+                            <p data-i18n="privacy-changes" class="text-slate-400 leading-relaxed text-sm">We may update this Privacy Policy. We will notify you by updating the "Last updated" date at the top.</p>
+                        </div>
+                        <div>
+                            <h3 data-i18n="privacy-sect13" class="text-xl font-semibold mb-4 text-slate-100 underline decoration-primary underline-offset-8">13. Contact Us</h3>
+                            <p data-i18n="privacy-contact-text" class="text-slate-400 leading-relaxed text-sm mb-4">If you have questions about this Privacy Policy:</p>
+                            <a href="mailto:shanglan4444@gmail.com" class="text-primary hover:text-white transition-colors font-medium">shanglan4444@gmail.com</a>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-        <h3 data-i18n="privacy-personal-info" class="text-lg font-medium mt-6 mb-3 text-slate-200">Personal Information You Provide</h3>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li><strong data-i18n="privacy-acc-info" class="text-slate-100">Account Information:</strong> <span data-i18n="privacy-acc-info-val">Email address and password</span></li>
-            <li><strong data-i18n="privacy-prof-info" class="text-slate-100">Profile Information:</strong> <span data-i18n="privacy-prof-info-val">Username and profile photo (optional)</span></li>
-            <li><strong data-i18n="privacy-user-content" class="text-slate-100">User Content:</strong> <span data-i18n="privacy-user-content-val">Text, photos, and audio you create in capsules</span></li>
-        </ul>
-
-        <h3 data-i18n="privacy-auto-info" class="text-lg font-medium mt-6 mb-3 text-slate-200">Information Collected Automatically</h3>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li><strong data-i18n="privacy-dev-info" class="text-slate-100">Device Information:</strong> <span data-i18n="privacy-dev-info-val">Device type, operating system</span></li>
-            <li><strong data-i18n="privacy-usage-data" class="text-slate-100">Usage Data:</strong> <span data-i18n="privacy-usage-data-val">Features you use, app interactions</span></li>
-            <li><strong data-i18n="privacy-loc-data" class="text-slate-100">Location Data:</strong> <span data-i18n="privacy-loc-data-val">Approximate location (if permitted)</span></li>
-        </ul>
-
-            <div class="flex items-center gap-3 mt-10 mb-4">
-                <span class="text-xl">⚙️</span>
-                <h2 data-i18n="privacy-sect2" class="text-2xl font-semibold">2. How We Use Your Information</h2>
-                <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-            </div>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li data-i18n="privacy-use-list1">Provide and maintain the App functionality</li>
-            <li data-i18n="privacy-use-list2">Store and sync your time capsules</li>
-            <li data-i18n="privacy-use-list3">Send notifications when capsules unlock</li>
-            <li data-i18n="privacy-use-list4">Respond to support requests</li>
-            <li data-i18n="privacy-use-list5">Improve user experience</li>
-            <li data-i18n="privacy-use-list6">Detect and prevent security issues</li>
-        </ul>
-
-        <h2 data-i18n="privacy-sect3" class="text-2xl font-semibold mt-10 mb-4">3. Data Storage and Security</h2>
-        
-        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5 my-6">
-            <h4 class="text-emerald-400 font-semibold mb-3 flex items-center gap-2">
-                <span>🔐</span> <span data-i18n="privacy-encryption">Data Encryption</span>
-            </h4>
-            <p data-i18n="privacy-encryption-desc" class="text-slate-300 text-sm leading-relaxed">
-                Your data (including photos and wishes/messages) is stored with the following security measures:
-            </p>
-            <ul class="text-slate-400 text-sm mt-3 pl-5 list-disc space-y-2">
-                <li><strong data-i18n="privacy-transit" class="text-slate-200">In Transit:</strong> <span data-i18n="privacy-transit-val">All data is encrypted using TLS/SSL during transmission between your device and our servers.</span></li>
-                <li><strong data-i18n="privacy-rest" class="text-slate-200">At Rest:</strong> <span data-i18n="privacy-rest-val">Your capsule content (text, photos, audio) is stored on secure cloud servers provided by Supabase with server-side encryption enabled.</span></li>
-                <li><strong data-i18n="privacy-access" class="text-slate-200">Access Control:</strong> <span data-i18n="privacy-access-val">Your data can only be accessed by your authenticated account. We use row-level security policies to ensure data isolation.</span></li>
-            </ul>
-        </div>
-
-        <div class="bg-surface border border-border rounded-xl p-5 my-6">
-            <h4 class="text-slate-100 font-semibold mb-2 flex items-center gap-2">
-                <span>⚠️</span> <span data-i18n="privacy-note">Note</span>
-            </h4>
-            <p data-i18n="privacy-note-val" class="text-slate-400 text-sm">No method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
-        </div>
-
-        <h2 data-i18n="privacy-sect4" class="text-2xl font-semibold mt-10 mb-4">4. Data Retention Policy</h2>
-        
-        <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-5 my-6">
-            <h4 class="text-blue-400 font-semibold mb-3 flex items-center gap-2">
-                <span>📦</span> <span data-i18n="privacy-keep">How Long We Keep Your Data</span>
-            </h4>
-            <ul class="text-slate-400 text-sm pl-5 list-disc space-y-3">
-                <li>
-                    <strong data-i18n="privacy-keep-sealed" class="text-slate-200">Sealed Capsules:</strong> <span data-i18n="privacy-keep-sealed-val">Your capsule content is retained until the capsule unlocks and you choose to delete it, or until you delete your account.</span>
-                </li>
-                <li>
-                    <strong data-i18n="privacy-keep-unlocked" class="text-slate-200">Unlocked Capsules:</strong> <span data-i18n="privacy-keep-unlocked-val">After a capsule unlocks, content remains accessible until you manually delete it.</span>
-                </li>
-                <li>
-                    <strong data-i18n="privacy-keep-acc" class="text-slate-200">Account Data:</strong> <span data-i18n="privacy-keep-acc-val">Retained until you request account deletion.</span>
-                </li>
-                <li>
-                    <strong data-i18n="privacy-keep-deleted" class="text-slate-200">Deleted Data:</strong> <span data-i18n="privacy-keep-deleted-val">When you delete content or your account, data is permanently removed from our servers within 30 days.</span>
-                </li>
-            </ul>
-        </div>
-
-        <h2 data-i18n="privacy-sect5" class="text-2xl font-semibold mt-10 mb-4">5. App Permissions</h2>
-        
-        <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 my-6">
-            <h4 class="text-amber-400 font-semibold mb-3 flex items-center gap-2">
-                <span>📱</span> <span data-i18n="privacy-perm-why">Why We Request Permissions</span>
-            </h4>
-            <div class="space-y-4">
-                <div class="bg-surface/50 rounded-lg p-4">
-                    <h5 class="text-slate-200 font-medium mb-2 flex items-center gap-2">
-                        <span>🖼️</span> <span data-i18n="privacy-perm-photo">Photo Library Access</span>
-                    </h5>
-                    <p data-i18n="privacy-perm-photo-val" class="text-slate-400 text-sm">
-                        We request access to your Photo Library so you can select and add photos to your time capsules. 
-                        We only access photos you explicitly select - we never scan or access your entire photo library. 
-                        Selected photos are uploaded to our secure servers to be stored as part of your capsule.
-                    </p>
-                </div>
-                <div class="bg-surface/50 rounded-lg p-4">
-                    <h5 class="text-slate-200 font-medium mb-2 flex items-center gap-2">
-                        <span>🎤</span> <span data-i18n="privacy-perm-mic">Microphone Access</span>
-                    </h5>
-                    <p data-i18n="privacy-perm-mic-val" class="text-slate-400 text-sm">
-                        We request microphone access to allow you to record voice messages for your capsules. 
-                        Audio is only recorded when you actively press the record button.
-                    </p>
-                </div>
-                <div class="bg-surface/50 rounded-lg p-4">
-                    <h5 class="text-slate-200 font-medium mb-2 flex items-center gap-2">
-                        <span>🔔</span> <span data-i18n="privacy-perm-notif">Push Notifications</span>
-                    </h5>
-                    <p data-i18n="privacy-perm-notif-val" class="text-slate-400 text-sm">
-                        We use push notifications to alert you when your time capsules are ready to be opened. 
-                        You can disable notifications in your device settings at any time.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 data-i18n="privacy-sect6" class="text-2xl font-semibold mt-10 mb-4">6. Data Sharing</h2>
-        <p data-i18n="privacy-sell" class="text-slate-100 font-semibold mb-3">We do not sell your personal information.</p>
-        <p data-i18n="privacy-share-only" class="text-slate-400 mb-3">We may share information only:</p>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li data-i18n="privacy-share-list1">With service providers who help operate the App</li>
-            <li data-i18n="privacy-share-list2">When required by law</li>
-            <li data-i18n="privacy-share-list3">To protect rights and safety</li>
-            <li data-i18n="privacy-share-list4">In connection with a business transfer</li>
-        </ul>
-
-        <h3 data-i18n="privacy-third-party" class="text-lg font-medium mt-6 mb-3 text-slate-200">Third-Party Services</h3>
-        <div class="overflow-x-auto">
-            <table class="w-full text-sm border-collapse my-4">
-                <thead>
-                    <tr>
-                        <th data-i18n="privacy-table-service" class="text-left p-3 bg-surface text-slate-100 border-b border-border">Service</th>
-                        <th data-i18n="privacy-table-purpose" class="text-left p-3 bg-surface text-slate-100 border-b border-border">Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="p-3 text-slate-400 border-b border-border">Supabase</td>
-                        <td class="p-3 text-slate-400 border-b border-border">Database, Authentication, Storage</td>
-                    </tr>
-                    <tr>
-                        <td class="p-3 text-slate-400 border-b border-border">Expo</td>
-                        <td class="p-3 text-slate-400 border-b border-border">App Framework</td>
-                    </tr>
-                    <tr>
-                        <td class="p-3 text-slate-400 border-b border-border">Apple Push Notification</td>
-                        <td class="p-3 text-slate-400 border-b border-border">Notifications</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 data-i18n="privacy-sect7" class="text-2xl font-semibold mt-10 mb-4">7. Your Rights</h2>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li><strong data-i18n="privacy-rights-access" class="text-slate-100">Access:</strong> <span data-i18n="privacy-rights-access-val">Request a copy of your data</span></li>
-            <li><strong data-i18n="privacy-rights-corr" class="text-slate-100">Correction:</strong> <span data-i18n="privacy-rights-corr-val">Update your information in Settings</span></li>
-            <li><strong data-i18n="privacy-rights-del" class="text-slate-100">Deletion:</strong> <span data-i18n="privacy-rights-del-val">Delete your account in Settings</span></li>
-            <li><strong data-i18n="privacy-rights-opt" class="text-slate-100">Opt-Out:</strong> <span data-i18n="privacy-rights-opt-val">Disable notifications in device settings</span></li>
-        </ul>
-
-        <h2 data-i18n="privacy-sect8" class="text-2xl font-semibold mt-10 mb-4">8. Children's Privacy</h2>
-        <p data-i18n="privacy-children" class="text-slate-400 mb-4">
-            Our App is not intended for children under 13. We do not knowingly collect
-            information from children under 13.
-        </p>
-
-        <h2 data-i18n="privacy-sect9" class="text-2xl font-semibold mt-10 mb-4">9. International Transfers</h2>
-        <p data-i18n="privacy-intl" class="text-slate-400 mb-4">
-            Your information may be transferred to and processed in countries outside
-            your residence, including the United States.
-        </p>
-
-        <h2 data-i18n="privacy-sect10" class="text-2xl font-semibold mt-10 mb-4">10. California Privacy Rights (CCPA)</h2>
-        <p data-i18n="privacy-ccpa-rights" class="text-slate-400 mb-3">California residents have rights to:</p>
-        <ul class="text-slate-400 mb-4 pl-6 list-disc space-y-2">
-            <li data-i18n="privacy-ccpa-list1">Know what personal information is collected</li>
-            <li data-i18n="privacy-ccpa-list2">Delete personal information</li>
-            <li data-i18n="privacy-ccpa-list3">Opt-out of sale (we do not sell data)</li>
-        </ul>
-
-        <h2 data-i18n="privacy-sect11" class="text-2xl font-semibold mt-10 mb-4">11. European Privacy Rights (GDPR)</h2>
-        <p data-i18n="privacy-gdpr" class="text-slate-400 mb-4">EEA residents have rights including access, rectification, erasure, and data portability.</p>
-
-        <h2 data-i18n="privacy-sect12" class="text-2xl font-semibold mt-10 mb-4">12. Changes to This Policy</h2>
-        <p data-i18n="privacy-changes" class="text-slate-400 mb-4">
-            We may update this Privacy Policy. We will notify you of changes by updating
-            the "Last updated" date.
-        </p>
-
-        <h2 data-i18n="privacy-sect13" class="text-2xl font-semibold mt-10 mb-4">13. Contact Us</h2>
-        <p data-i18n="privacy-contact-text" class="text-slate-400 mb-4">If you have questions about this Privacy Policy:</p>
-
-        <div class="relative overflow-hidden bg-surface border border-border rounded-2xl p-8 my-8">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-violet-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-            <div class="relative flex flex-col md:flex-row items-center gap-6">
-                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary to-violet-500 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/25">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                    </svg>
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h3 data-i18n="privacy-q-title" class="text-xl font-semibold text-slate-100 mb-1">Privacy Questions?</h3>
-                    <p data-i18n="privacy-q-desc" class="text-slate-400 text-sm">We're committed to protecting your data. Reach out anytime!</p>
-                </div>
-                <a href="mailto:shanglan4444@gmail.com" class="group flex items-center gap-2 bg-gradient-to-r from-primary to-violet-500 text-white px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
-                    <span>shanglan4444@gmail.com</span>
-                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
         </div>
     </main>
 
-    <footer class="text-center py-8 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-5 mb-3 flex-wrap">
-            <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+    <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
+        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
+            <a href="index.html" data-i18n="nav-home" class="hover:text-primary transition-colors">Home</a>
+            <a href="privacy.html" data-i18n="nav-privacy" class="text-primary">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
         </div>

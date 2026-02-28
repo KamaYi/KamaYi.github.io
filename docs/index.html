@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Capsule - Send Messages to Your Future Self</title>
-    <meta name="description" content="Create digital time capsules to preserve your memories for the future.">
+    <meta name="description" content="Create digital time capsules and preserve your memories for the future with Time Capsule App.">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,211 +29,152 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <header class="relative overflow-hidden text-center py-20 px-6 border-b border-border">
+    <header class="relative overflow-hidden text-center py-24 px-6 border-b border-border">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-bg to-violet-600/20"></div>
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] -translate-y-1/2"></div>
         <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-violet-500/30 rounded-full blur-[100px] translate-y-1/2"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-violet-500/5 rounded-full blur-3xl"></div>
         
         <div class="relative">
-            <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
-                <span class="text-5xl">💊</span>
+            <div class="inline-flex items-center justify-center w-24 h-24 mb-8 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-[2.5rem] backdrop-blur-sm border border-white/10 shadow-2xl">
+                <span class="text-6xl">💊</span>
             </div>
-            <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
+            <h1 data-i18n="header-title" class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
                 Time Capsule
             </h1>
-            <p data-i18n="header-subtitle" class="text-slate-300 text-lg font-light tracking-wide">Send Messages to Your Future Self</p>
-            <div class="mt-6 flex justify-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse delay-100"></span>
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse delay-200"></span>
+            <p data-i18n="header-subtitle" class="text-slate-300 text-xl md:text-2xl font-light tracking-wide">Send Messages to Your Future Self</p>
+            <div class="mt-8 flex justify-center gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-pulse delay-100"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse delay-200"></span>
             </div>
         </div>
     </header>
 
-    <nav class="flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface border-b border-border flex-wrap">
-        <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary">Home</a>
-        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Privacy Policy</a>
-        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Terms of Service</a>
-        <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Support</a>
+    <nav class="sticky top-0 z-50 flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface/80 backdrop-blur-md border-b border-border flex-wrap transition-all duration-300">
+        <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Home</a>
+        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy Policy</a>
+        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms of Service</a>
+        <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
         <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
             <span>🌐</span>
             <span>中文</span>
         </button>
     </nav>
 
-    <main class="relative max-w-4xl mx-auto px-6 py-12">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-        <div class="absolute bottom-1/3 left-0 w-64 h-64 bg-violet-500/5 rounded-full blur-[80px] pointer-events-none"></div>
-        
-        <div class="relative">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-1 h-8 bg-gradient-to-b from-primary to-violet-500 rounded-full"></div>
-                <h1 data-i18n="welcome-title" class="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">Welcome to Time Capsule</h1>
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        <section class="text-center mb-24 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+            <h2 data-i18n="welcome-title" class="text-4xl font-bold mb-6 text-slate-100">Welcome to Time Capsule</h2>
+            <p data-i18n="welcome-desc" class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">Create digital time capsules to preserve your memories for the future</p>
+            <p data-i18n="intro-text" class="text-slate-300 leading-relaxed max-w-3xl mx-auto text-lg">
+                Time Capsule lets you capture your thoughts and photos today and lock them away until a future date. Write letters to your future self, preserve special moments, or set goals to check on later.
+            </p>
+        </section>
+
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-1.5 h-10 bg-gradient-to-b from-primary to-violet-500 rounded-full"></div>
+                <h2 data-i18n="features-title" class="text-3xl font-bold text-slate-100">Features</h2>
             </div>
-            <p data-i18n="welcome-desc" class="text-slate-400 text-sm mb-8 pb-6 border-b border-border/50">Create digital time capsules to preserve your memories for the future</p>
-
-            <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-primary/10 rounded-full blur-xl"></div>
-                <p data-i18n="intro-text" class="relative text-slate-300 leading-relaxed">
-                    Time Capsule lets you capture your thoughts and photos today
-                    and lock them away until a future date. Write letters to your future self,
-                    preserve special moments, or set goals to check on later.
-                </p>
-            </div>
-
-            <div class="flex items-center gap-3 mb-6">
-                <span class="text-2xl">✨</span>
-                <h2 data-i18n="features-title" class="text-2xl font-semibold">Features</h2>
-                <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-pink-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">📝</span>
-                        </div>
-                        <h3 data-i18n="feat-letters-title" class="text-base font-semibold mb-2">Write Letters</h3>
-                        <p data-i18n="feat-letters-desc" class="text-slate-400 text-sm">Compose heartfelt messages to your future self.</p>
-                    </div>
-                </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">📷</span>
-                        </div>
-                        <h3 data-i18n="feat-photos-title" class="text-base font-semibold mb-2">Add Photos</h3>
-                        <p data-i18n="feat-photos-desc" class="text-slate-400 text-sm">Include up to 9 photos to capture the moment.</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Cards -->
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">📝</div>
+                    <h3 data-i18n="feat-letters-title" class="text-xl font-semibold mb-3 text-slate-100">Write Letters</h3>
+                    <p data-i18n="feat-letters-desc" class="text-slate-400 leading-relaxed">Compose heartfelt messages to your future self.</p>
                 </div>
 
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">⏰</span>
-                        </div>
-                        <h3 data-i18n="feat-dates-title" class="text-base font-semibold mb-2">Set Unlock Dates</h3>
-                        <p data-i18n="feat-dates-desc" class="text-slate-400 text-sm">Choose when to unlock, from 30 days to 10 years.</p>
-                    </div>
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-violet-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">📷</div>
+                    <h3 data-i18n="feat-photos-title" class="text-xl font-semibold mb-3 text-slate-100">Add Photos</h3>
+                    <p data-i18n="feat-photos-desc" class="text-slate-400 leading-relaxed">Include up to 9 photos to capture the moment.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">🔔</span>
-                        </div>
-                        <h3 data-i18n="feat-notified-title" class="text-base font-semibold mb-2">Get Notified</h3>
-                        <p data-i18n="feat-notified-desc" class="text-slate-400 text-sm">Receive notifications when capsules unlock.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⏰</div>
+                    <h3 data-i18n="feat-dates-title" class="text-xl font-semibold mb-3 text-slate-100">Set Unlock Dates</h3>
+                    <p data-i18n="feat-dates-desc" class="text-slate-400 leading-relaxed">Choose when to unlock, from 30 days to 10 years.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-emerald-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-green-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">🔒</span>
-                        </div>
-                        <h3 data-i18n="feat-storage-title" class="text-base font-semibold mb-2">Secure Storage</h3>
-                        <p data-i18n="feat-storage-desc" class="text-slate-400 text-sm">Your memories are encrypted and stored securely.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-violet-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🔔</div>
+                    <h3 data-i18n="feat-notified-title" class="text-xl font-semibold mb-3 text-slate-100">Get Notified</h3>
+                    <p data-i18n="feat-notified-desc" class="text-slate-400 leading-relaxed">Receive notifications when capsules unlock.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-amber-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">🛡️</span>
-                        </div>
-                        <h3 data-i18n="feat-contract-title" class="text-base font-semibold mb-2">Time Contract</h3>
-                        <p data-i18n="feat-contract-desc" class="text-slate-400 text-sm">Lock your memories forever. Signed capsules can never be deleted.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-emerald-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🛡️</div>
+                    <h3 data-i18n="feat-contract-title" class="text-xl font-semibold mb-3 text-slate-100">Time Contract</h3>
+                    <p data-i18n="feat-contract-desc" class="text-slate-400 leading-relaxed">Lock your memories forever. Signed capsules can never be deleted.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-cyan-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">⚡</span>
-                        </div>
-                        <h3 data-i18n="feat-continuation-title" class="text-base font-semibold mb-2">Time Continuation</h3>
-                        <p data-i18n="feat-continuation-desc" class="text-slate-400 text-sm">Automatic delivery if you're inactive for long periods.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-amber-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-amber-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⏳</div>
+                    <h3 data-i18n="feat-continuation-title" class="text-xl font-semibold mb-3 text-slate-100">Time Continuation</h3>
+                    <p data-i18n="feat-continuation-desc" class="text-slate-400 leading-relaxed">Automatic delivery if you're inactive for long periods.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-rose-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">💑</span>
-                        </div>
-                        <h3 data-i18n="feat-couple-title" class="text-base font-semibold mb-2">Couple Mode</h3>
-                        <p data-i18n="feat-couple-desc" class="text-slate-400 text-sm">Create shared timelines and memories with your partner.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-pink-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-pink-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">💑</div>
+                    <h3 data-i18n="feat-couple-title" class="text-xl font-semibold mb-3 text-slate-100">Couple Mode</h3>
+                    <p data-i18n="feat-couple-desc" class="text-slate-400 leading-relaxed">Create shared timelines and memories with your partner.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-indigo-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">🪄</span>
-                        </div>
-                        <h3 data-i18n="feat-blur-title" class="text-base font-semibold mb-2">Privacy Blur</h3>
-                        <p data-i18n="feat-blur-desc" class="text-slate-400 text-sm">Gaussian blur protects your sealed content until the very end.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-cyan-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">✨</div>
+                    <h3 data-i18n="feat-blur-title" class="text-xl font-semibold mb-3 text-slate-100">Privacy Blur</h3>
+                    <p data-i18n="feat-blur-desc" class="text-slate-400 leading-relaxed">Gaussian blur protects your sealed content until the very end.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-violet-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">👑</span>
-                        </div>
-                        <h3 data-i18n="feat-max-title" class="text-base font-semibold mb-2">Max Plan</h3>
-                        <p data-i18n="feat-max-desc" class="text-slate-400 text-sm">Unlimited capsules and premium storage for power users.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-blue-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⭐</div>
+                    <h3 data-i18n="feat-max-title" class="text-xl font-semibold mb-3 text-slate-100">Max Plan</h3>
+                    <p data-i18n="feat-max-desc" class="text-slate-400 leading-relaxed">Unlimited capsules and premium storage for power users.</p>
                 </div>
-                <div class="group relative bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-amber-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-2xl">🌐</span>
-                        </div>
-                        <h3 data-i18n="feat-multi-title" class="text-base font-semibold mb-2">Multi-language</h3>
-                        <p data-i18n="feat-multi-desc" class="text-slate-400 text-sm">Supports both English and Chinese for global users.</p>
-                    </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-indigo-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🌐</div>
+                    <h3 data-i18n="feat-multi-title" class="text-xl font-semibold mb-3 text-slate-100">Multi-language</h3>
+                    <p data-i18n="feat-multi-desc" class="text-slate-400 leading-relaxed">Supports both English and Chinese for global users.</p>
+                </div>
+
+                <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🔒</div>
+                    <h3 data-i18n="feat-storage-title" class="text-xl font-semibold mb-3 text-slate-100">Secure Storage</h3>
+                    <p data-i18n="feat-storage-desc" class="text-slate-400 leading-relaxed">Your memories are encrypted and stored securely.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="flex items-center gap-3 mt-10 mb-6">
-                <span class="text-2xl">📧</span>
-                <h2 data-i18n="contact-title" class="text-2xl font-semibold">Contact Us</h2>
-                <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-            </div>
-
-            <div class="relative overflow-hidden bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-8 my-8">
+        <section class="text-center bg-gradient-to-br from-surface to-surface/50 border border-border rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div class="absolute bottom-0 left-0 w-48 h-48 bg-violet-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-            <div class="relative flex flex-col md:flex-row items-center gap-6">
-                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary to-violet-500 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/25">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h3 data-i18n="contact-q" class="text-xl font-semibold text-slate-100 mb-1">Have questions or feedback?</h3>
-                    <p data-i18n="contact-desc" class="text-slate-400 text-sm">We'd love to hear from you. Drop us an email anytime!</p>
-                </div>
-                <a href="mailto:shanglan4444@gmail.com" class="group flex items-center gap-2 bg-gradient-to-r from-primary to-violet-500 text-white px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
+            <div class="relative">
+                <h2 data-i18n="contact-title" class="text-4xl font-bold mb-6 text-slate-100">Contact Us</h2>
+                <h3 data-i18n="contact-q" class="text-xl text-primary font-medium mb-4">Have questions or feedback?</h3>
+                <p data-i18n="contact-desc" class="text-slate-400 mb-10 max-w-xl mx-auto">We'd love to hear from you. Drop us an email anytime!</p>
+                <a href="mailto:shanglan4444@gmail.com" class="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-violet-500 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all hover:shadow-2xl hover:shadow-primary/25 hover:-translate-y-1 active:scale-95">
                     <span>shanglan4444@gmail.com</span>
-                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
             </div>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="text-center py-8 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-5 mb-3 flex-wrap">
+    <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
+        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
             <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>

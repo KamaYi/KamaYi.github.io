@@ -51,11 +51,11 @@
         </div>
     </header>
 
-    <nav class="flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface border-b border-border flex-wrap">
-        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Home</a>
-        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Privacy Policy</a>
-        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary">Terms of Service</a>
-        <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary">Support</a>
+    <nav class="sticky top-0 z-50 flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface/80 backdrop-blur-md border-b border-border flex-wrap transition-all duration-300">
+        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy Policy</a>
+        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms of Service</a>
+        <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Support</a>
         <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
             <span>🌐</span>
             <span>中文</span>
@@ -85,91 +85,91 @@
 
         <div class="space-y-3">
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q1" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">➕</span>
                     How do I create a time capsule?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Tap the "+" button, add your content, set an unlock date, and tap "Seal Capsule".</p>
+                <p data-i18n="faq-a1" class="text-slate-400 text-sm pl-8">Tap the "+" button, add your content, set an unlock date, and tap "Seal Capsule".</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q2" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">🔓</span>
                     Can I open a capsule before the unlock date?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">No, sealed capsules cannot be opened early. This preserves the surprise!</p>
+                <p data-i18n="faq-a2" class="text-slate-400 text-sm pl-8">No, sealed capsules cannot be opened early. This preserves the surprise!</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q3" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">🔔</span>
                     What happens when my capsule unlocks?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">You'll receive a notification. Tap it to view your capsule's contents.</p>
+                <p data-i18n="faq-a3" class="text-slate-400 text-sm pl-8">You'll receive a notification. Tap it to view your capsule's contents.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q4" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-emerald-500/20 rounded-lg flex items-center justify-center text-xs text-emerald-400">🔒</span>
                     Is my data secure?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Yes! Your data is encrypted during transmission (TLS/SSL) and stored securely on cloud servers with encryption. Only you can access your content through your authenticated account.</p>
+                <p data-i18n="faq-a4" class="text-slate-400 text-sm pl-8">Yes! Your data is encrypted during transmission (TLS/SSL) and stored securely on cloud servers with encryption. Only you can access your content through your authenticated account.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q5" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">📅</span>
                     How long will my data be stored?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Your capsule content is stored until the capsule unlocks and you delete it, or until you delete your account. We retain your data as long as you need it.</p>
+                <p data-i18n="faq-a5" class="text-slate-400 text-sm pl-8">Your capsule content is stored until the capsule unlocks and you delete it, or until you delete your account. We retain your data as long as you need it.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q6" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">🛡️</span>
                     What is a "Time Contract"?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">A Time Contract (Prevent Deletion) makes your capsule permanent. Once signed and sealed, the capsule cannot be deleted by you or the recipient, even after it unlocks. It's designed for preserving irreplaceable memories.</p>
+                <p data-i18n="faq-a6" class="text-slate-400 text-sm pl-8">A Time Contract (Prevent Deletion) makes your capsule permanent. Once signed and sealed, the capsule cannot be deleted by you or the recipient, even after it unlocks. It's designed for preserving irreplaceable memories.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q7" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xs text-cyan-400">⚡</span>
                     How does "Time Continuation" work?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">If you're inactive for 6 months, capsules with this feature enabled will be automatically delivered to your chosen recipients early. This ensures your messages reach their destination even if you're unable to access the app.</p>
+                <p data-i18n="faq-a7" class="text-slate-400 text-sm pl-8">If you're inactive for 6 months, capsules with this feature enabled will be automatically delivered to your chosen recipients early. This ensures your messages reach their destination even if you're unable to access the app.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q8" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center text-xs text-red-400">🗑️</span>
                     How do I delete my account?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Go to Settings → Account → Delete Account. Your data will be permanently removed within 30 days.</p>
+                <p data-i18n="faq-a8" class="text-slate-400 text-sm pl-8">Go to Settings → Account → Delete Account. Your data will be permanently removed within 30 days.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q9" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">💳</span>
                     How do I cancel my subscription?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Manage subscriptions in your device Settings → Apple ID → Subscriptions.</p>
+                <p data-i18n="faq-a9" class="text-slate-400 text-sm pl-8">Manage subscriptions in your device Settings → Apple ID → Subscriptions.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q10" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">⚠️</span>
                     The app isn't working. What should I do?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Try: 1) Force close and reopen, 2) Check internet connection, 3) Update the app, 4) Restart your device.</p>
+                <p data-i18n="faq-a10" class="text-slate-400 text-sm pl-8">Try: 1) Force close and reopen, 2) Check internet connection, 3) Update the app, 4) Restart your device.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                <h4 class="text-slate-100 font-medium mb-2 flex items-center gap-2">
+                <h4 data-i18n="faq-q11" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
                     <span class="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center text-xs text-blue-400">🌐</span>
                     What languages does the app support?
                 </h4>
-                <p class="text-slate-400 text-sm pl-8">Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.</p>
+                <p data-i18n="faq-a11" class="text-slate-400 text-sm pl-8">Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.</p>
             </div>
         </div>
 
@@ -275,11 +275,11 @@
         </div>
     </main>
 
-    <footer class="text-center py-8 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-5 mb-3 flex-wrap">
+    <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
+        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
             <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
+            <a href="support.html" data-i18n="nav-support" class="text-primary">Support</a>
         </div>
         <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
     </footer>

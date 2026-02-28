@@ -130,7 +130,7 @@ const translations = {
         "privacy-q-desc": "We're committed to protecting your data. Reach out anytime!",
         // Terms Page
         "terms-title": "Terms of Service",
-        "terms-intro": "Please read these Terms of Service carefully before using the Time Capsule mobile application operated by Time Capsule (\"we,\" \"us,\" or \"our\").",
+        "terms-intro": "Please read these Terms of Service carefully before using the Time Capsule mobile application operated by Time Capsule (\"we,\" \"our,\" or \"us\").",
         "terms-sect1": "1. Acceptance of Terms",
         "terms-accept-val": "By using the App, you agree to be bound by these Terms and our Privacy Policy. If you disagree, you may not use the App.",
         "terms-sect2": "2. Description of Service",
@@ -196,6 +196,29 @@ const translations = {
         "support-info-req": "Requires",
         "support-info-langs": "Languages",
         "support-info-langs-val": "English, Chinese",
+        // FAQ items
+        "faq-q1": "How do I create a time capsule?",
+        "faq-a1": "Tap the \"+\" button, add your content, set an unlock date, and tap \"Seal Capsule\".",
+        "faq-q2": "Can I open a capsule before the unlock date?",
+        "faq-a2": "No, sealed capsules cannot be opened early. This preserves the surprise!",
+        "faq-q3": "What happens when my capsule unlocks?",
+        "faq-a3": "You'll receive a notification. Tap it to view your capsule's contents.",
+        "faq-q4": "Is my data secure?",
+        "faq-a4": "Yes! Your data is encrypted during transmission (TLS/SSL) and stored securely on cloud servers with encryption. Only you can access your content through your authenticated account.",
+        "faq-q5": "How long will my data be stored?",
+        "faq-a5": "Your capsule content is stored until the capsule unlocks and you delete it, or until you delete your account. We retain your data as long as you need it.",
+        "faq-q6": "What is a \"Time Contract\"?",
+        "faq-a6": "A Time Contract (Prevent Deletion) makes your capsule permanent. Once signed and sealed, the capsule cannot be deleted by you or the recipient, even after it unlocks. It's designed for preserving irreplaceable memories.",
+        "faq-q7": "How does \"Time Continuation\" work?",
+        "faq-a7": "If you're inactive for 6 months, capsules with this feature enabled will be automatically delivered to your chosen recipients early. This ensures your messages reach their destination even if you're unable to access the app.",
+        "faq-q8": "How do I delete my account?",
+        "faq-a8": "Go to Settings → Account → Delete Account. Your data will be permanently removed within 30 days.",
+        "faq-q9": "How do I cancel my subscription?",
+        "faq-a9": "Manage subscriptions in your device Settings → Apple ID → Subscriptions.",
+        "faq-q10": "The app isn't working. What should I do?",
+        "faq-a10": "Try: 1) Force close and reopen, 2) Check internet connection, 3) Update the app, 4) Restart your device.",
+        "faq-q11": "What languages does the app support?",
+        "faq-a11": "Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.",
     },
     zh: {
         "nav-home": "首页",
@@ -240,7 +263,7 @@ const translations = {
         "privacy-last-updated": "最近更新：2026年1月",
         "privacy-intro": "时光胶囊（“我们”或“我们的”）致力于保护您的隐私。本隐私政策解释了您在使用我们的移动应用程序时，我们如何收集、使用和保护您的信息。",
         "privacy-sect1": "1. 我们收集的信息",
-        "privacy-personal-info": "您提供的小我信息",
+        "privacy-personal-info": "您提供的信息",
         "privacy-acc-info": "账户信息：",
         "privacy-acc-info-val": "电子邮件地址和密码",
         "privacy-prof-info": "个人资料信息：",
@@ -394,13 +417,36 @@ const translations = {
         "support-info-req": "系统要求",
         "support-info-langs": "语言",
         "support-info-langs-val": "英文、中文",
+        // FAQ items
+        "faq-q1": "如何创建时光胶囊？",
+        "faq-a1": "点击“+”按钮，添加您的内容，设置开启日期，然后点击“封存胶囊”。",
+        "faq-q2": "我可以在开启日期之前打开胶囊吗？",
+        "faq-a2": "不可以，封存后的胶囊无法提前打开。这是为了保留那份惊喜！",
+        "faq-q3": "胶囊开启时会发生什么？",
+        "faq-a3": "您将收到一条通知。点击通知即可查看胶囊内容。",
+        "faq-q4": "我的数据安全吗？",
+        "faq-a4": "是的！您的数据在传输过程中（TLS/SSL）经过加密，并安全地存储在经过加密的云服务器上。只有您可以通过经过身份验证的账户访问您的内容。",
+        "faq-q5": "我的数据会存储多久？",
+        "faq-a5": "您的胶囊内容将一直存储，直到胶囊开启且您选择删除它，或者直到您删除账户。只要您需要，我们就会保留您的数据。",
+        "faq-q6": "什么是“时光契约”？",
+        "faq-a6": "时光契约（禁止删除）使您的胶囊具有永久性。一旦签署并封存，即使在开启后，您或接收者也无法删除该胶囊。它专为保存不可替代的回忆而设计。",
+        "faq-q7": "“时光延续”是如何运作的？",
+        "faq-a7": "如果您连续 6 个月未登录，启用了此功能的胶囊将自动提前递送给您选择的接收者。这确保了即使您无法访问应用，您的消息也能送达目的地。",
+        "faq-q8": "如何删除我的账户？",
+        "faq-a8": "前往 设置 → 账户 → 删除账户。您的数据将在 30 天内永久删除。",
+        "faq-q9": "如何取消订阅？",
+        "faq-a9": "在您的设备 设置 → Apple ID → 订阅 中管理订阅。",
+        "faq-q10": "应用无法正常运行。我该怎么办？",
+        "faq-a10": "尝试：1) 强制关闭并重新打开，2) 检查网络连接，3) 更新应用，4) 重启设备。",
+        "faq-q11": "应用支持哪些语言？",
+        "faq-a11": "时光胶囊支持英文和中文（简体）。应用语言遵循您的设备系统语言设置。",
     }
 };
 
 function applyTranslations(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
