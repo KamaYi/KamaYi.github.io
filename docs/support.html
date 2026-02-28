@@ -29,12 +29,20 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface/80 backdrop-blur-md border-b border-border flex-wrap transition-all duration-300">
-        <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
-        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy Policy</a>
-        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms of Service</a>
-        <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Support</a>
-        <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
+                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
+            </a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+            <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+            <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
+            <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Support</a>
+        </div>
+        <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
             <span>🌐</span>
             <span>中文</span>
         </button>
@@ -174,42 +182,6 @@
         </div>
 
             <div class="flex items-center gap-3 mt-12 mb-6">
-                <span class="text-xl">📧</span>
-                <h2 data-i18n="contact-title" class="text-2xl font-semibold">Contact Us</h2>
-                <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-            </div>
-        <p data-i18n="contact-desc-alt" class="text-slate-400 mb-4">Still need help? We're here for you!</p>
-
-        <div class="relative overflow-hidden bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-2xl p-8 my-8">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-violet-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-            <div class="relative flex flex-col md:flex-row items-center gap-6">
-                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary to-violet-500 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/25">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
-                    </svg>
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h3 data-i18n="contact-get-in-touch" class="text-xl font-semibold text-slate-100 mb-1">Get in Touch</h3>
-                    <p data-i18n="contact-desc-fast" class="text-slate-400 text-sm">For questions, feedback, or bug reports - we respond quickly!</p>
-                </div>
-                <a href="mailto:shanglan4444@gmail.com" class="group flex items-center gap-2 bg-gradient-to-r from-primary to-violet-500 text-white px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
-                    <span>shanglan4444@gmail.com</span>
-                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-5 my-6">
-            <h4 class="text-cyan-400 font-semibold mb-2 flex items-center gap-2">
-                <span>💡</span> <span data-i18n="support-tip-title">Tip: Help Us Help You</span>
-            </h4>
-            <p data-i18n="support-tip-desc" class="text-slate-400 text-sm">When reporting issues, include your device model and app version for faster support!</p>
-        </div>
-
-            <div class="flex items-center gap-3 mt-12 mb-6">
                 <span class="text-xl">📝</span>
                 <h2 data-i18n="support-feedback-title" class="text-2xl font-semibold">Submit Feedback</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
@@ -228,6 +200,22 @@
                         required
                     ></textarea>
                 </div>
+                
+                <div>
+                    <label data-i18n="support-form-media" class="block text-slate-200 font-medium mb-2">Attachments (Optional)</label>
+                    <div id="mediaPreview" class="flex flex-wrap gap-3 mb-3"></div>
+                    <label class="group relative flex items-center justify-center gap-3 bg-bg/50 border-2 border-dashed border-border rounded-xl p-8 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all">
+                        <input type="file" id="mediaInput" class="hidden" accept="image/*,video/*" multiple>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            </div>
+                            <span data-i18n="support-form-add-media" class="text-slate-300 font-medium">Add Images/Video</span>
+                            <span data-i18n="support-form-media-limit" class="text-slate-500 text-xs">Max 9 images and 1 video.</span>
+                        </div>
+                    </label>
+                </div>
+
                 <div>
                     <label data-i18n="support-form-email" class="block text-slate-200 font-medium mb-2">Your Email <span class="text-red-400">*</span></label>
                     <input 
@@ -328,6 +316,74 @@
             msgEl.classList.remove('hidden');
         }
 
+        const mediaInput = document.getElementById('mediaInput');
+        const mediaPreview = document.getElementById('mediaPreview');
+        let selectedFiles = [];
+
+        mediaInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            
+            files.forEach(file => {
+                const isVideo = file.type.startsWith('video/');
+                const isImage = file.type.startsWith('image/');
+                
+                if (!isVideo && !isImage) return;
+
+                const videoCount = selectedFiles.filter(f => f.type.startsWith('video/')).length;
+                const imageCount = selectedFiles.filter(f => f.type.startsWith('image/')).length;
+
+                if (isVideo && videoCount >= 1) {
+                    alert('You can only upload 1 video.');
+                    return;
+                }
+                if (isImage && imageCount >= 9) {
+                    alert('You can only upload up to 9 images.');
+                    return;
+                }
+
+                selectedFiles.push(file);
+                renderPreview();
+            });
+            mediaInput.value = ''; // Reset input so same file can be selected again
+        });
+
+        function renderPreview() {
+            mediaPreview.innerHTML = '';
+            selectedFiles.forEach((file, index) => {
+                const reader = new FileReader();
+                const div = document.createElement('div');
+                div.className = 'relative w-24 h-24 bg-bg rounded-lg overflow-hidden group border border-border';
+                
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.className = 'w-full h-full object-cover';
+                    reader.onload = (e) => img.src = e.target.result;
+                    reader.readAsDataURL(file);
+                    div.appendChild(img);
+                } else {
+                    div.className += ' flex items-center justify-center';
+                    div.innerHTML = '<span class="text-2xl">🎬</span>';
+                }
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity';
+                removeBtn.innerHTML = '✕';
+                removeBtn.onclick = (e) => {
+                    e.preventDefault();
+                    selectedFiles.splice(index, 1);
+                    renderPreview();
+                };
+                div.appendChild(removeBtn);
+                mediaPreview.appendChild(div);
+            });
+        }
+
+        async function uploadFile(file) {
+            // In a real scenario, you'd upload to Supabase Storage
+            // For this static site, we'll just simulate and return a mock URL
+            return `https://example.com/uploads/${file.name}`;
+        }
+
         document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const desc = document.getElementById('feedbackDesc').value.trim();
@@ -356,6 +412,7 @@
             }
 
             submitBtn.disabled = true;
+            const originalBtnHtml = submitBtn.innerHTML;
             submitBtn.innerHTML = `
                 <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -365,6 +422,13 @@
             `;
 
             try {
+                // Simulate file uploads if any
+                const attachments = [];
+                for (const file of selectedFiles) {
+                    const url = await uploadFile(file);
+                    attachments.push(url);
+                }
+
                 const response = await fetch(`${SUPABASE_URL}/rest/v1/feedback`, {
                     method: 'POST',
                     headers: {
@@ -376,7 +440,7 @@
                     body: JSON.stringify({
                         reason: desc,
                         email: email,
-                        attachments: []
+                        attachments: attachments
                     })
                 });
 
@@ -386,16 +450,13 @@
                 showMessage('success', 'Thank you! Your feedback has been submitted successfully.');
                 document.getElementById('feedbackDesc').value = '';
                 document.getElementById('feedbackEmail').value = '';
+                selectedFiles = [];
+                renderPreview();
             } catch (error) {
                 showMessage('error', 'Failed to submit feedback. Please try again later.');
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-                    </svg>
-                    Submit Feedback
-                `;
+                submitBtn.innerHTML = originalBtnHtml;
             }
         });
     </script>

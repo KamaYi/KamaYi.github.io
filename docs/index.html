@@ -29,12 +29,20 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex justify-center items-center gap-2 md:gap-4 p-4 bg-surface/80 backdrop-blur-md border-b border-border flex-wrap transition-all duration-300">
-        <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Home</a>
-        <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy Policy</a>
-        <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms of Service</a>
-        <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-4 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
-        <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-4 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
+                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
+            </a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+            <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Home</a>
+            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+            <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
+            <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+        </div>
+        <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
             <span>🌐</span>
             <span>中文</span>
         </button>
