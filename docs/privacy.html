@@ -42,7 +42,7 @@
             <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
             <span class="font-bold text-base md:text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden md:block whitespace-nowrap">Time Capsule</span>
         </a>
-        <div class="flex items-center gap-1 md:gap-3 flex-1 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div class="flex items-center gap-1 md:gap-3 flex-1 md:justify-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20 whitespace-nowrap shrink-0">Home</a>
             <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-100 bg-primary text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20 whitespace-nowrap shrink-0">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20 whitespace-nowrap shrink-0">Terms of Service</a>
@@ -79,6 +79,7 @@
                 <div class="w-1 h-8 bg-gradient-to-b from-primary to-violet-500 rounded-full"></div>
                 <h1 data-i18n="privacy-title" class="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">Privacy Policy</h1>
             </div>
+            <p data-i18n="privacy-last-updated" class="text-slate-500 text-sm mb-2">Last updated: January 2026</p>
 
 
             <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10 shadow-xl shadow-primary/5">
@@ -238,11 +239,41 @@
                             </div>
                         </div>
                         <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🎙️</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-mic" class="text-slate-100 font-semibold mb-2 text-lg">Microphone Access</h4>
+                                <p data-i18n="privacy-perm-mic-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We request microphone access to allow you to record voice messages for your capsules.
+                                    Audio is only recorded when you actively press the record button.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📍</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-loc" class="text-slate-100 font-semibold mb-2 text-lg">Location Access</h4>
+                                <p data-i18n="privacy-perm-loc-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We request location access to capture your approximate location as optional context in your capsules (e.g., weather, place name).
+                                    Location is only accessed when you explicitly add location context to a capsule and is never collected in the background.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+                            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📷</div>
+                            <div>
+                                <h4 data-i18n="privacy-perm-camera" class="text-slate-100 font-semibold mb-2 text-lg">Camera Access</h4>
+                                <p data-i18n="privacy-perm-camera-val" class="text-slate-400 text-sm leading-relaxed">
+                                    We request camera access to allow you to take photos or record short videos directly for your capsules.
+                                    The camera is only activated when you choose to capture media.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
                             <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔔</div>
                             <div>
                                 <h4 data-i18n="privacy-perm-notif" class="text-slate-100 font-semibold mb-2 text-lg">Push Notifications</h4>
                                 <p data-i18n="privacy-perm-notif-val" class="text-slate-400 text-sm leading-relaxed">
-                                    We use push notifications to alert you when your time capsules are ready to be opened. 
+                                    We use push notifications to alert you when your time capsules are ready to be opened.
                                     You can disable notifications in your settings at any time.
                                 </p>
                             </div>
@@ -302,17 +333,30 @@
                     </div>
                 </section>
 
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xl">👶</span>
+                        <h2 data-i18n="privacy-sect8" class="text-2xl font-semibold">8. Children's Privacy</h2>
+                        <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
+                    </div>
+                    <div class="bg-surface/50 border border-border/50 rounded-2xl p-6">
+                        <p data-i18n="privacy-children" class="text-slate-300 leading-relaxed">
+                            Our App is not intended for children under 13. We do not knowingly collect information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately so we can delete it.
+                        </p>
+                    </div>
+                </section>
+
                 <section class="border-t border-border pt-12">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
-                            <h3 data-i18n="privacy-sect12" class="text-xl font-semibold mb-4 text-slate-100">12. Policy Changes</h3>
+                            <h3 data-i18n="privacy-sect12" class="text-xl font-semibold mb-4 text-slate-100">9. Policy Changes</h3>
                             <p data-i18n="privacy-changes" class="text-slate-400 leading-relaxed text-sm">We may update this Privacy Policy. We will notify you by updating the "Last updated" date at the top.</p>
                         </div>
                         <div>
-                            <h3 data-i18n="privacy-sect13" class="text-xl font-semibold mb-4 text-slate-100">13. Contact Us</h3>
+                            <h3 data-i18n="privacy-sect13" class="text-xl font-semibold mb-4 text-slate-100">10. Contact Us</h3>
                             <p class="text-slate-400 leading-relaxed text-sm flex flex-wrap items-center">
                                 <span data-i18n="privacy-contact-text" class="mr-1">If you have questions about this Privacy Policy:</span>
-                                <a href="mailto:support@timecapsule.qzz.io" class="text-primary hover:text-white transition-colors font-medium">support@timecapsule.qzz.io</a>
+                                <a href="mailto:support@timecoder.xyz" class="text-primary hover:text-white transition-colors font-medium">support@timecoder.xyz</a>
                             </p>
                         </div>
                     </div>

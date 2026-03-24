@@ -4,6 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // 邮件验证跳转：检测 hash 是否为 Supabase 验证链接，是则直接跳转
+        (function() {
+            var hash = window.location.hash.substring(1);
+            if (!hash) return;
+            var target = '';
+            try { target = decodeURIComponent(hash); } catch(e) { target = hash; }
+            if (target.indexOf('supabase.co/auth/v1/verify') !== -1) {
+                window.location.replace(target);
+            }
+        })();
+    </script>
     <title>Time Capsule - Send Messages to Your Future Self</title>
     <meta name="description" content="Create digital time capsules and preserve your memories for the future with Time Capsule App.">
     <link rel="icon"
@@ -42,7 +54,7 @@
             <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
             <span class="font-bold text-base md:text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden md:block whitespace-nowrap">Time Capsule</span>
         </a>
-        <div class="flex items-center gap-1 md:gap-3 flex-1 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div class="flex items-center gap-1 md:gap-3 flex-1 md:justify-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20 whitespace-nowrap shrink-0">Home</a>
             <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20 whitespace-nowrap shrink-0">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs font-medium px-2.5 py-1.5 md:px-3 md:py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20 whitespace-nowrap shrink-0">Terms of Service</a>
