@@ -35,6 +35,7 @@ const translations = {
         "contact-q": "Have questions or feedback?",
         "contact-desc": "We'd love to hear from you. Drop us an email anytime!",
         "footer-rights": "© 2026 Time Capsule. All rights reserved.",
+        "footer-icp": "陕ICP备2026006122号",
         "lang-switch": "中文",
         // Privacy Page
         "privacy-title": "Privacy Policy",
@@ -159,6 +160,7 @@ const translations = {
         "terms-content-list5": "Contains viruses or harmful code",
         "terms-sect5": "5. Subscriptions and Payments",
         "terms-sub-val": "Premium features are available through paid subscriptions billed via the App Store. Subscriptions auto-renew unless cancelled. Refunds follow App Store policies.",
+        "terms-sub-billing-detail": "Auto-renewal: each plan renews at the end of its billing period until you cancel in your Apple ID subscription settings. Upgrades within the same subscription group (for example from Pro to Max, or from monthly to annual billing) generally take effect immediately; Apple may apply proration or other adjustments as shown on the payment authorization sheet before you confirm. Downgrades or shorter billing cycles may take effect at the next renewal, as determined by Apple. Actual pricing, taxes, and subscription status are always subject to App Store and Apple Media Services terms.",
         "terms-premium-title": "Premium Features",
         "terms-premium-list1": "Unlimited time capsules",
         "terms-premium-list2": "Extended unlock periods (up to 10 years)",
@@ -267,6 +269,7 @@ const translations = {
         "contact-q": "有任何疑问或反馈吗？",
         "contact-desc": "我们非常期待听到您的声音。随时给我们发邮件吧！",
         "footer-rights": "© 2026 时光胶囊。保留所有权利。",
+        "footer-icp": "陕ICP备2026006122号",
         "lang-switch": "English",
         // Privacy Page
         "privacy-title": "隐私政策",
@@ -391,6 +394,7 @@ const translations = {
         "terms-content-list5": "包含病毒或有害代码的内容",
         "terms-sect5": "5. 订阅与支付",
         "terms-sub-val": "高级功能可通过 App Store 计费的付费订阅获得。除非取消，否则订阅将自动续订。退款遵循 App Store 政策。",
+        "terms-sub-billing-detail": "自动续订：各方案会在当前计费周期结束后自动续费，直至您在 Apple ID 的订阅设置中关闭自动续费。同一订阅组内的升级（例如由 Pro 升至 Max，或由月付改为年付）通常即时生效；Apple 可能在您确认付款前的授权界面中展示按比例折算或其他计费调整。降级或缩短计费周期可能于下一续订日起生效，具体以 Apple 规则为准。价格、税费及订阅状态以 App Store 与 Apple 媒体服务条款为准。",
         "terms-premium-title": "高级功能",
         "terms-premium-list1": "无限时光胶囊",
         "terms-premium-list2": "延长开启期限（长达 10 年）",
