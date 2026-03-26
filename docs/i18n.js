@@ -41,7 +41,7 @@ const translations = {
     "contact-q": "Have questions or feedback?",
     "contact-desc": "We'd love to hear from you. Drop us an email anytime!",
     "footer-rights": "© 2026 Time Capsule. All rights reserved.",
-    "footer-icp": "陕ICP备2026006122号",
+    "footer-icp": "陕ICP备2026006122号-1",
     "lang-switch": "中文",
     // Privacy Page
     "privacy-title": "Privacy Policy",
@@ -323,7 +323,7 @@ const translations = {
     "contact-q": "有任何疑问或反馈吗？",
     "contact-desc": "我们非常期待听到您的声音。随时给我们发邮件吧！",
     "footer-rights": "© 2026 时光胶囊。保留所有权利。",
-    "footer-icp": "陕ICP备2026006122号",
+    "footer-icp": "陕ICP备2026006122号-1",
     "lang-switch": "English",
     // Privacy Page
     "privacy-title": "隐私政策",
