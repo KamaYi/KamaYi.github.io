@@ -1,5 +1,14 @@
 const translations = {
   en: {
+    "site-title-home": "Time Capsule - Send Messages to Your Future Self",
+    "site-title-privacy": "Privacy Policy - Time Capsule",
+    "site-title-terms": "Terms of Service - Time Capsule",
+    "site-title-support": "Support - Time Capsule",
+    "site-meta-home":
+      "Create digital time capsules and preserve your memories for the future with Time Capsule App.",
+    "site-meta-privacy": "Privacy Policy for Time Capsule App",
+    "site-meta-terms": "Terms of Service for Time Capsule App",
+    "site-meta-support": "Get help and support for Time Capsule App",
     "nav-home": "Home",
     "nav-privacy": "Privacy Policy",
     "nav-terms": "Terms of Service",
@@ -241,7 +250,9 @@ const translations = {
       "When reporting issues, include your device model and app version for faster support!",
     "support-feedback-title": "Submit Feedback",
     "support-form-desc": "Description",
+    "support-form-desc-placeholder": "Describe the problem you encountered...",
     "support-form-email": "Your Email",
+    "support-form-email-placeholder": "Enter your contact email",
     "support-form-media": "Attachments (Optional)",
     "support-form-add-media": "Add Images/Video",
     "support-form-media-limit": "Max 9 images and 1 video.",
@@ -287,6 +298,14 @@ const translations = {
       "Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.",
   },
   zh: {
+    "site-title-home": "时光胶囊 - 给未来的自己发送消息",
+    "site-title-privacy": "隐私政策 - 时光胶囊",
+    "site-title-terms": "服务条款 - 时光胶囊",
+    "site-title-support": "支持中心 - 时光胶囊",
+    "site-meta-home": "使用时光胶囊创建数字胶囊，为未来保存你的回忆。",
+    "site-meta-privacy": "时光胶囊应用的隐私政策",
+    "site-meta-terms": "时光胶囊应用的服务条款",
+    "site-meta-support": "获取时光胶囊应用的帮助与支持",
     "nav-home": "首页",
     "nav-privacy": "隐私政策",
     "nav-terms": "服务条款",
@@ -518,7 +537,9 @@ const translations = {
       "报告问题时，请提供您的设备型号和应用版本，以便我们更快地提供支持！",
     "support-feedback-title": "提交反馈",
     "support-form-desc": "问题描述",
+    "support-form-desc-placeholder": "请描述您遇到的问题...",
     "support-form-email": "您的电子邮件",
+    "support-form-email-placeholder": "请输入您的联系邮箱",
     "support-form-media": "上传附件（可选）",
     "support-form-add-media": "添加图片/视频",
     "support-form-media-limit": "最多 9 张图片和 1 个视频。",
@@ -567,22 +588,33 @@ function applyTranslations(lang) {
       el.innerText = translations[lang][key];
     }
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang] && translations[lang][key]) {
+      el.setAttribute("placeholder", translations[lang][key]);
+    }
+  });
+  document.querySelectorAll("[data-i18n-content]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-content");
+    if (translations[lang] && translations[lang][key]) {
+      el.setAttribute("content", translations[lang][key]);
+    }
+  });
   document.documentElement.lang = lang;
   localStorage.setItem("preferred-language", lang);
 }
 
 function toggleLanguage() {
-  const currentLang =
-    localStorage.getItem("preferred-language") ||
-    (navigator.language.startsWith("zh") ? "zh" : "en");
+  const currentLang = localStorage.getItem("preferred-language") || "en";
   const newLang = currentLang === "en" ? "zh" : "en";
   applyTranslations(newLang);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(location.search);
+  const urlLang = urlParams.get("lang");
   const savedLang = localStorage.getItem("preferred-language");
-  const systemLang = navigator.language.startsWith("zh") ? "zh" : "en";
-  const langToUse = savedLang || systemLang;
+  const langToUse = urlLang && translations[urlLang] ? urlLang : savedLang || "en";
   applyTranslations(langToUse);
 
   // Add toggle button listener if it exists

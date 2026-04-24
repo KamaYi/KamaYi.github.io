@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Time Capsule</title>
-    <meta name="description" content="Get help and support for Time Capsule App">
+    <title data-i18n="site-title-support">Support - Time Capsule</title>
+    <meta name="description" data-i18n-content="site-meta-support" content="Get help and support for Time Capsule App">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -191,10 +191,15 @@
                     <textarea 
                         id="feedbackDesc" 
                         rows="4" 
+                        maxlength="300"
+                        data-i18n-placeholder="support-form-desc-placeholder"
                         placeholder="Describe the problem you encountered..."
                         class="w-full bg-bg/50 border border-border rounded-xl p-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                         required
                     ></textarea>
+                    <div class="mt-2 flex justify-end">
+                        <span id="descCounter" class="text-xs text-slate-500">0/300</span>
+                    </div>
                 </div>
                 
                 <div>
@@ -217,6 +222,7 @@
                     <input 
                         type="email" 
                         id="feedbackEmail" 
+                        data-i18n-placeholder="support-form-email-placeholder"
                         placeholder="Enter your contact email"
                         class="w-full bg-bg/50 border border-border rounded-xl p-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         required
@@ -293,6 +299,7 @@
         const RATE_LIMIT_KEY = 'feedback_submissions';
         const MAX_SUBMISSIONS = 3;
         const TIME_WINDOW = 60 * 60 * 1000;
+        const MAX_DESC_LENGTH = 300;
 
         function getSubmissions(email) {
             const data = localStorage.getItem(RATE_LIMIT_KEY);
@@ -321,7 +328,26 @@
 
         const mediaInput = document.getElementById('mediaInput');
         const mediaPreview = document.getElementById('mediaPreview');
+        const feedbackDescInput = document.getElementById('feedbackDesc');
+        const descCounter = document.getElementById('descCounter');
         let selectedFiles = [];
+
+        function updateDescCounter() {
+            const currentLength = feedbackDescInput.value.length;
+            descCounter.textContent = `${currentLength}/${MAX_DESC_LENGTH}`;
+            descCounter.className = currentLength >= MAX_DESC_LENGTH
+                ? 'text-xs text-amber-400'
+                : 'text-xs text-slate-500';
+        }
+
+        feedbackDescInput.addEventListener('input', () => {
+            if (feedbackDescInput.value.length > MAX_DESC_LENGTH) {
+                feedbackDescInput.value = feedbackDescInput.value.slice(0, MAX_DESC_LENGTH);
+            }
+            updateDescCounter();
+        });
+
+        updateDescCounter();
 
         mediaInput.addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
@@ -437,6 +463,10 @@
                 showMessage('error', 'Description cannot be empty.');
                 return;
             }
+            if (desc.length > MAX_DESC_LENGTH) {
+                showMessage('error', `Description must be ${MAX_DESC_LENGTH} characters or fewer.`);
+                return;
+            }
 
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!email || !emailRegex.test(email)) {
@@ -487,6 +517,7 @@
                 addSubmission(email);
                 showMessage('success', 'Thank you! Your feedback has been submitted successfully.');
                 document.getElementById('feedbackDesc').value = '';
+                updateDescCounter();
                 document.getElementById('feedbackEmail').value = '';
                 selectedFiles = [];
                 renderPreview();
