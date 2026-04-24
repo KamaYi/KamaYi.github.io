@@ -288,6 +288,8 @@
 
         const SUPABASE_URL = 'https://jhczmzdsorsxhfiltqta.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoY3ptemRzb3JzeGhmaWx0cXRhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNDcwMTUsImV4cCI6MjA4MjcyMzAxNX0.QuVTlvFGeEffqZVWemuZhIFqIs0V9erxqXyFyEhHWe8';
+        const FEEDBACK_BUCKET = 'feedback';
+        const FEEDBACK_SOURCE = 'web';
         const RATE_LIMIT_KEY = 'feedback_submissions';
         const MAX_SUBMISSIONS = 3;
         const TIME_WINDOW = 60 * 60 * 1000;
@@ -379,10 +381,48 @@
             });
         }
 
+        function sanitizeFileName(fileName) {
+            const extIndex = fileName.lastIndexOf('.');
+            const base = extIndex >= 0 ? fileName.slice(0, extIndex) : fileName;
+            const ext = extIndex >= 0 ? fileName.slice(extIndex).toLowerCase() : '';
+            const safeBase = base
+                .toLowerCase()
+                .replace(/[^a-z0-9-_]+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .slice(0, 60) || 'file';
+
+            return `${safeBase}${ext}`;
+        }
+
+        function buildStoragePath(file) {
+            const now = new Date();
+            const datePrefix = now.toISOString().slice(0, 10);
+            const randomPart = Math.random().toString(36).slice(2, 10);
+            const safeName = sanitizeFileName(file.name || 'upload');
+            return `${FEEDBACK_SOURCE}/anonymous/${datePrefix}/${Date.now()}-${randomPart}-${safeName}`;
+        }
+
         async function uploadFile(file) {
-            // In a real scenario, you'd upload to Supabase Storage
-            // For this static site, we'll just simulate and return a mock URL
-            return `https://example.com/uploads/${file.name}`;
+            const filePath = buildStoragePath(file);
+            const uploadUrl = `${SUPABASE_URL}/storage/v1/object/${FEEDBACK_BUCKET}/${filePath}`;
+
+            const response = await fetch(uploadUrl, {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'x-upsert': 'true',
+                    'Content-Type': file.type || 'application/octet-stream'
+                },
+                body: file
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text().catch(() => '');
+                throw new Error(`Upload failed: ${response.status} ${errorText}`);
+            }
+
+            return `${SUPABASE_URL}/storage/v1/object/public/${FEEDBACK_BUCKET}/${filePath}`;
         }
 
         document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
@@ -424,11 +464,7 @@
 
             try {
                 // Simulate file uploads if any
-                const attachments = [];
-                for (const file of selectedFiles) {
-                    const url = await uploadFile(file);
-                    attachments.push(url);
-                }
+                const attachments = await Promise.all(selectedFiles.map(uploadFile));
 
                 const response = await fetch(`${SUPABASE_URL}/rest/v1/feedback`, {
                     method: 'POST',
@@ -441,7 +477,8 @@
                     body: JSON.stringify({
                         reason: desc,
                         email: email,
-                        attachments: attachments
+                        attachments: attachments,
+                        source: FEEDBACK_SOURCE
                     })
                 });
 
