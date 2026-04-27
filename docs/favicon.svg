@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <linearGradient id="capsuleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#818CF8"/>
+      <stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+    <linearGradient id="capsuleGradRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="roundedRect">
+      <rect width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" clip-path="url(#roundedRect)">
+    <line x1="0" y1="256" x2="1024" y2="256" stroke="#818CF8" stroke-width="1"/>
+    <line x1="0" y1="512" x2="1024" y2="512" stroke="#818CF8" stroke-width="1"/>
+    <line x1="0" y1="768" x2="1024" y2="768" stroke="#818CF8" stroke-width="1"/>
+    <line x1="256" y1="0" x2="256" y2="1024" stroke="#818CF8" stroke-width="1"/>
+    <line x1="512" y1="0" x2="512" y2="1024" stroke="#818CF8" stroke-width="1"/>
+    <line x1="768" y1="0" x2="768" y2="1024" stroke="#818CF8" stroke-width="1"/>
+  </g>
+
+  <!-- Glow orb behind capsule -->
+  <ellipse cx="512" cy="512" rx="260" ry="200" fill="#6366F1" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Capsule body - horizontal pill shape -->
+  <!-- Left half (rounded) -->
+  <rect x="212" y="400" width="300" height="224" fill="url(#capsuleGrad)" rx="0"/>
+  <ellipse cx="212" cy="512" rx="112" ry="112" fill="url(#capsuleGrad)"/>
+
+  <!-- Right half (rounded) -->
+  <rect x="512" y="400" width="300" height="224" fill="url(#capsuleGradRight)" rx="0"/>
+  <ellipse cx="812" cy="512" rx="112" ry="112" fill="url(#capsuleGradRight)"/>
+
+  <!-- Center divider line -->
+  <rect x="508" y="400" width="8" height="224" fill="#0F172A" opacity="0.4"/>
+
+  <!-- Highlight on left half -->
+  <ellipse cx="340" cy="450" rx="80" ry="30" fill="white" opacity="0.12" transform="rotate(-15, 340, 450)"/>
+
+  <!-- Stars / sparkles -->
+  <g fill="#E2E8F0" opacity="0.7" filter="url(#glow)">
+    <!-- Top left star -->
+    <polygon points="180,200 188,220 210,220 193,232 200,252 180,240 160,252 167,232 150,220 172,220" transform="scale(0.6) translate(120, 80)"/>
+    <!-- Top right star -->
+    <polygon points="820,160 826,178 846,178 830,188 836,206 820,196 804,206 810,188 794,178 814,178" transform="scale(0.5) translate(820, 120)"/>
+    <!-- Bottom left dot -->
+    <circle cx="220" cy="730" r="6" opacity="0.5"/>
+    <!-- Bottom right dot -->
+    <circle cx="800" cy="760" r="4" opacity="0.4"/>
+    <!-- Small dots scattered -->
+    <circle cx="300" cy="280" r="3" opacity="0.6"/>
+    <circle cx="730" cy="300" r="3" opacity="0.6"/>
+  </g>
+
+  <!-- Lock icon on capsule -->
+  <g transform="translate(470, 464)" fill="#0F172A" opacity="0.35">
+    <rect x="8" y="18" width="28" height="22" rx="3"/>
+    <path d="M12 18 V12 Q22 4 32 12 V18" fill="none" stroke="#0F172A" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <!-- Bottom text label area - subtle -->
+  <text x="512" y="700" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="52" font-weight="600" fill="#E2E8F0" text-anchor="middle" opacity="0.9" letter-spacing="4">时光寄语</text>
+</svg>

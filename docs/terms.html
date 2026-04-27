@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- 宓屽叆妯″紡锛?embed=1 鏃堕殣钘忓鑸爮涓庡簳閮ㄥ鑸紝閬垮厤 WebView 鍐呴噸澶嶅鑸?-->
+    <script>if(location.search.includes('embed=1'))document.write('<style>nav,#nav-menu,footer{display:none!important}</style>');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site-title-terms">Terms of Service - Time Capsule</title>
-    <meta name="description" data-i18n-content="site-meta-terms" content="Terms of Service for Time Capsule App">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+    <title data-i18n="site-title-terms">Terms of Service - Time Letter</title>
+    <meta name="description" data-i18n-content="site-meta-terms" content="Terms of Service for Time Letter App">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="i18n.js"></script>
     <script>
@@ -29,26 +32,60 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
-                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
-            </a>
+    <nav class="sticky top-0 z-50 relative w-full bg-surface/80 backdrop-blur-md border-b border-border">
+        <div class="grid grid-cols-3 items-center gap-x-2 px-3 py-2.5 md:hidden">
+            <div class="flex min-w-0 justify-start">
+                <a href="index.html" class="flex items-center gap-1.5 group -ml-0.5 shrink-0" aria-label="Home">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                </a>
+            </div>
+            <div class="min-w-0 flex justify-center px-0.5">
+                <span class="block w-full truncate text-center text-base font-bold leading-snug tracking-tight text-slate-100" data-i18n="terms-title">Terms of Service</span>
+            </div>
+            <div class="flex min-w-0 justify-end items-center gap-1.5">
+                <button id="menu-toggle" type="button" aria-label="Menu" class="text-slate-100 bg-slate-700/50 border border-border h-10 w-10 rounded-lg transition-all hover:bg-primary inline-flex items-center justify-center shrink-0 p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border h-10 text-xs font-medium px-2.5 rounded-lg transition-all hover:bg-primary whitespace-nowrap shrink-0 inline-flex items-center justify-center" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex items-center justify-center flex-1 gap-2 md:gap-4 mx-4">
-            <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
-            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
-            <a href="terms.html" data-i18n="nav-terms" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Terms</a>
-            <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+        <div class="hidden md:flex w-full items-center gap-4 px-8 py-3">
+            <div class="shrink-0">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block" data-i18n="header-title">Time Letter</span>
+                </a>
+            </div>
+            <div class="flex flex-1 justify-center items-center gap-4">
+                <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="text-slate-100 bg-primary text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
+            <div class="shrink-0">
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex justify-end">
-            <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
-                <span>🌐</span>
-                <span>中文</span>
-            </button>
+        <div id="nav-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-[#1E293B] border-b border-[#334155] shadow-2xl">
+            <div class="flex flex-col divide-y divide-border/80">
+                <a href="index.html" data-i18n="nav-home" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-100 bg-primary transition-colors hover:bg-primary-dark">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
         </div>
     </nav>
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function (e) { e.stopPropagation(); menu.classList.toggle('hidden'); });
+            document.addEventListener('click', function () { menu.classList.add('hidden'); });
+        })();
+    </script>
 
     <header class="relative overflow-hidden text-center py-20 px-6 border-b border-border">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-bg to-violet-600/20"></div>
@@ -58,10 +95,10 @@
         
         <div class="relative">
             <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
-                <span class="text-5xl">💊</span>
+                <img src="favicon.png" alt="Time Letter" class="h-14 w-14 rounded-[1.1rem] shadow-2xl shadow-primary/20">
             </div>
             <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
-                Time Capsule
+                Time Letter
             </h1>
         </div>
     </header>
@@ -80,15 +117,15 @@
             <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10 shadow-xl shadow-primary/5">
                 <div class="absolute top-4 right-4 w-16 h-16 bg-primary/10 rounded-full blur-xl"></div>
                 <p data-i18n="terms-intro" class="relative text-slate-300 leading-relaxed text-lg">
-                    Please read these Terms of Service carefully before using the Time Capsule
-                    mobile application operated by Time Capsule ("we," "us," or "our").
+                    Please read these Terms of Service carefully before using the Time Letter
+                    mobile application operated by Time Letter ("we," "us," or "our").
                 </p>
             </div>
 
             <div class="space-y-12">
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">✅</span>
+                        <span class="text-xl">鉁?/span>
                         <h2 data-i18n="terms-sect1" class="text-2xl font-semibold">1. Acceptance of Terms</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -100,18 +137,18 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">📦</span>
+                        <span class="text-xl">馃摝</span>
                         <h2 data-i18n="terms-sect2" class="text-2xl font-semibold">2. Description of Service</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
                     <p data-i18n="terms-desc-val" class="text-slate-400 text-lg leading-relaxed mb-6">
-                        Time Capsule allows users to create digital time capsules containing text, photos,
-                        and audio that can be set to unlock at a future date.
+                        Time Letter allows users to create digital time letters containing text, photos, videos,
+                        and audio, invite specific recipients, and unlock those memories at a future date.
                     </p>
                     <div class="bg-surface/50 border border-border/50 rounded-2xl p-8 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
                         <h4 class="text-slate-100 font-semibold mb-4 text-lg flex items-center gap-3">
-                            <span class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-base">🌐</span>
+                            <span class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-base">馃寪</span>
                             <span data-i18n="terms-lang-title">Supported Languages</span>
                         </h4>
                         <p data-i18n="terms-lang-val" class="text-slate-400 leading-relaxed">
@@ -123,7 +160,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">👤</span>
+                        <span class="text-xl">馃懁</span>
                         <h2 data-i18n="terms-sect3" class="text-2xl font-semibold">3. User Accounts</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -131,24 +168,29 @@
                         <p data-i18n="terms-acc-req" class="text-slate-100 font-semibold mb-6">To use the App, you must:</p>
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <li class="flex items-center gap-4 bg-bg/50 p-4 rounded-xl border border-border/50">
-                                <span class="text-primary text-xl">✓</span> <span data-i18n="terms-acc-list1">Provide accurate information</span>
+                                <span class="text-primary text-xl">鉁?/span> <span data-i18n="terms-acc-list1">Provide accurate information</span>
                             </li>
                             <li class="flex items-center gap-4 bg-bg/50 p-4 rounded-xl border border-border/50">
-                                <span class="text-primary text-xl">✓</span> <span data-i18n="terms-acc-list2">Keep your password secure</span>
+                                <span class="text-primary text-xl">鉁?/span> <span data-i18n="terms-acc-list2">Keep your password secure</span>
                             </li>
                             <li class="flex items-center gap-4 bg-bg/50 p-4 rounded-xl border border-border/50">
-                                <span class="text-primary text-xl">✓</span> <span data-i18n="terms-acc-list3">Be at least 13 years old</span>
+                                <span class="text-primary text-xl">鉁?/span> <span data-i18n="terms-acc-list3">Be at least 13 years old</span>
                             </li>
                             <li class="flex items-center gap-4 bg-bg/50 p-4 rounded-xl border border-border/50">
-                                <span class="text-primary text-xl">✓</span> <span data-i18n="terms-acc-list4">Notify us of unauthorized access</span>
+                                <span class="text-primary text-xl">鉁?/span> <span data-i18n="terms-acc-list4">Notify us of unauthorized access</span>
                             </li>
                         </ul>
+                        <div class="mt-5 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+                            <p data-i18n="terms-acc-note" class="text-slate-300 text-sm leading-7">
+                                Time Letter is intended for teens and adults. If you are under the age of majority in your region, use the App only with parent or legal guardian permission where required.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">📤</span>
+                        <span class="text-xl">馃摛</span>
                         <h2 data-i18n="terms-sect4" class="text-2xl font-semibold">4. User Content</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -159,18 +201,18 @@
                     <div class="bg-red-500/5 border border-red-500/20 rounded-2xl p-6">
                         <p data-i18n="terms-content-val2" class="text-slate-200 font-semibold mb-4">You agree not to upload content that:</p>
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-400 text-sm">
-                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> <span data-i18n="terms-content-list1">Is illegal, harmful, or abusive</span></li>
-                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> <span data-i18n="terms-content-list2">Infringes intellectual property rights</span></li>
-                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> <span data-i18n="terms-content-list3">Contains explicit material</span></li>
-                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> <span data-i18n="terms-content-list4">Promotes violence or illegal activities</span></li>
-                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> <span data-i18n="terms-content-list5">Contains viruses or harmful code</span></li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">脳</span> <span data-i18n="terms-content-list1">Is illegal, harmful, or abusive</span></li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">脳</span> <span data-i18n="terms-content-list2">Infringes intellectual property rights</span></li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">脳</span> <span data-i18n="terms-content-list3">Contains explicit material</span></li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">脳</span> <span data-i18n="terms-content-list4">Promotes violence or illegal activities</span></li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">脳</span> <span data-i18n="terms-content-list5">Contains viruses or harmful code</span></li>
                         </ul>
                     </div>
                 </section>
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">💳</span>
+                        <span class="text-xl">馃挸</span>
                         <h2 data-i18n="terms-sect5" class="text-2xl font-semibold">5. Subscriptions and Payments</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -179,44 +221,37 @@
                         Subscriptions auto-renew unless cancelled. Refunds follow App Store policies.
                     </p>
                     <p data-i18n="terms-sub-billing-detail" class="text-slate-400 text-base leading-relaxed mb-8"></p>
-                    <div class="bg-violet-500/10 border border-violet-500/30 rounded-[2rem] p-8 md:p-12 relative overflow-hidden group">
+                    <div class="bg-violet-500/10 border border-violet-500/30 rounded-[2rem] p-8 md:p-10 relative overflow-hidden group shadow-2xl shadow-violet-950/20">
                         <div class="absolute top-0 right-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         <h4 class="text-violet-400 font-bold mb-8 text-2xl flex items-center gap-4">
-                            <span class="w-12 h-12 bg-violet-500/20 rounded-2xl flex items-center justify-center text-2xl">💎</span>
-                            <span data-i18n="terms-premium-title">Premium Features</span>
+                            <span class="w-12 h-12 bg-violet-500/20 rounded-2xl flex items-center justify-center text-2xl">馃拵</span>
+                            <span data-i18n="terms-premium-title">Current Pro / Max Highlights</span>
                         </h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">1</span>
-                                <h5 data-i18n="terms-premium-list1" class="text-slate-100 font-semibold">Unlimited time capsules</h5>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">2</span>
-                                <h5 data-i18n="terms-premium-list2" class="text-slate-100 font-semibold">Extended unlock periods</h5>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">3</span>
-                                <h5 data-i18n="terms-premium-list3" class="text-slate-100 font-semibold">Additional photo storage</h5>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">4</span>
-                                <h5 data-i18n="terms-premium-list4" class="text-slate-100 font-semibold">Priority support</h5>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">5</span>
-                                <h5 data-i18n="terms-premium-list5" class="text-slate-100 font-semibold">Time Contract (Prevent Deletion)</h5>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs text-violet-300 flex-shrink-0 mt-0.5">6</span>
-                                <h5 data-i18n="terms-premium-list6" class="text-slate-100 font-semibold">Family Sharing (Annual plans)</h5>
-                            </li>
-                        </ul>
+                        <p data-i18n="terms-premium-intro" class="relative mb-6 text-slate-300 leading-8 text-base md:text-lg">
+                            Paid subscriptions may unlock expanded storage, higher capsule and media limits, longer unlock periods, AI-assisted writing, and other advanced features.
+                        </p>
+                        <div class="relative rounded-[1.75rem] border border-violet-400/20 bg-[#151c32]/80 p-6 md:p-7 backdrop-blur-sm">
+                            <div class="rounded-2xl border border-border/60 bg-surface/45 px-5 py-4">
+                                <p class="flex flex-wrap items-center gap-x-3 gap-y-2 text-slate-200 text-base md:text-lg leading-8">
+                                    <span data-i18n="terms-premium-summary1">Higher storage and usage limits</span>
+                                    <span class="text-violet-300/50" aria-hidden="true">路</span>
+                                    <span data-i18n="terms-premium-summary2">Longer unlock periods and advanced controls</span>
+                                    <span class="text-violet-300/50" aria-hidden="true">路</span>
+                                    <span data-i18n="terms-premium-summary3">AI-assisted writing and enhanced features</span>
+                                </p>
+                            </div>
+                            <div class="mt-5 rounded-2xl border border-violet-300/15 bg-violet-400/8 px-5 py-4">
+                                <p data-i18n="terms-premium-note" class="text-slate-200 leading-8 text-base">
+                                    The specific price, billing cycle, and benefits of paid subscriptions are subject to the in-app purchase page and the App Store listing shown at the time of purchase.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">🚫</span>
+                        <span class="text-xl">馃毇</span>
                         <h2 data-i18n="terms-sect6" class="text-2xl font-semibold">6. Prohibited Activities</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -242,7 +277,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">🛑</span>
+                        <span class="text-xl">馃洃</span>
                         <h2 data-i18n="terms-sect7" class="text-2xl font-semibold">7. Termination</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -254,7 +289,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">⚠️</span>
+                        <span class="text-xl">鈿狅笍</span>
                         <h2 data-i18n="terms-sect8" class="text-2xl font-semibold">8. Disclaimers</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -291,16 +326,19 @@
     </main>
 
     <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
+        <div id="footer-tabs" class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
             <a href="index.html" data-i18n="nav-home" class="hover:text-primary transition-colors">Home</a>
             <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="text-primary">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
         </div>
-        <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
-        <p class="mt-2">
+        <p data-i18n="footer-rights">© 2026 Time Letter. All rights reserved.</p>
+        <p class="mt-2 flex justify-center gap-6 flex-wrap">
             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-                <span data-i18n="footer-icp">陕ICP备2026006122号-1</span>
+                <span data-i18n="footer-icp">闄旾CP澶?026006122鍙?1</span>
+            </a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010402001028" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                <span data-i18n="footer-psb">闄曞叕缃戝畨澶?1010402001028鍙?/span>
             </a>
         </p>
     </footer>

@@ -1,24 +1,24 @@
 const translations = {
   en: {
-    "site-title-home": "Time Capsule - Send Messages to Your Future Self",
-    "site-title-privacy": "Privacy Policy - Time Capsule",
-    "site-title-terms": "Terms of Service - Time Capsule",
-    "site-title-support": "Support - Time Capsule",
+    "site-title-home": "Time Letter - Send Messages to Your Future Self",
+    "site-title-privacy": "Privacy Policy - Time Letter",
+    "site-title-terms": "Terms of Service - Time Letter",
+    "site-title-support": "Support - Time Letter",
     "site-meta-home":
-      "Create digital time capsules and preserve your memories for the future with Time Capsule App.",
-    "site-meta-privacy": "Privacy Policy for Time Capsule App",
-    "site-meta-terms": "Terms of Service for Time Capsule App",
-    "site-meta-support": "Get help and support for Time Capsule App",
+      "Create digital time letters and preserve your memories for the future with Time Letter App.",
+    "site-meta-privacy": "Privacy Policy for Time Letter App",
+    "site-meta-terms": "Terms of Service for Time Letter App",
+    "site-meta-support": "Get help and support for Time Letter App",
     "nav-home": "Home",
-    "nav-privacy": "Privacy Policy",
-    "nav-terms": "Terms of Service",
+    "nav-privacy": "Privacy",
+    "nav-terms": "Terms",
     "nav-support": "Support",
-    "header-title": "Time Capsule",
-    "welcome-title": "Welcome to Time Capsule",
+    "header-title": "Time Letter",
+    "welcome-title": "Welcome to Time Letter",
     "welcome-desc":
-      "Create digital time capsules to preserve your memories for the future",
+      "Create digital time letters to preserve your memories for the future",
     "intro-text":
-      "Time Capsule lets you capture your thoughts and photos today and lock them away until a future date. Write letters to your future self, preserve special moments, or set goals to check on later.",
+      "Time Letter lets you capture your thoughts and photos today and lock them away until a future date. Write letters to your future self, preserve special moments, or set goals to check on later.",
     "features-title": "Features",
     "feat-letters-title": "Write Letters",
     "feat-letters-desc": "Compose heartfelt messages to your future self.",
@@ -49,14 +49,17 @@ const translations = {
     "contact-title": "Contact Us",
     "contact-q": "Have questions or feedback?",
     "contact-desc": "We'd love to hear from you. Drop us an email anytime!",
-    "footer-rights": "© 2026 Time Capsule. All rights reserved.",
+    "footer-rights": "© 2026 Time Letter. All rights reserved.",
+    // ICP：替换为工信部备案管理系统中显示的完整编号（与页面语言无关，中英可同文）
     "footer-icp": "陕ICP备2026006122号-1",
+    // 公安备案号（与页面语言无关，中英可同文）
+    "footer-psb": "陕公网安备61010402001028号",
     "lang-switch": "中文",
     // Privacy Page
     "privacy-title": "Privacy Policy",
     "privacy-last-updated": "Last updated: January 2026",
     "privacy-intro":
-      'Time Capsule ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.',
+      'Time Letter ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.',
     "privacy-sect1": "1. Information We Collect",
     "privacy-personal-info": "Personal Information You Provide",
     "privacy-acc-info": "Account Information:",
@@ -75,7 +78,7 @@ const translations = {
     "privacy-loc-data-val": "Approximate location (if permitted)",
     "privacy-sect2": "2. How We Use Your Information",
     "privacy-use-list1": "Provide and maintain the App functionality",
-    "privacy-use-list2": "Store and sync your time capsules",
+    "privacy-use-list2": "Store and sync your time letters",
     "privacy-use-list3": "Send notifications when capsules unlock",
     "privacy-use-list4": "Respond to support requests",
     "privacy-use-list5": "Improve user experience",
@@ -113,22 +116,13 @@ const translations = {
     "privacy-perm-why": "Why We Request Permissions",
     "privacy-perm-photo": "Photo Library Access",
     "privacy-perm-photo-val":
-      "We request access to your Photo Library so you can select and add photos to your time capsules. We only access photos you explicitly select - we never scan or access your entire photo library. Selected photos are uploaded to our secure servers to be stored as part of your capsule.",
+      "We request access to your Photo Library so you can select and add photos to your time letters. We only access photos you explicitly select - we never scan or access your entire photo library. Selected photos are uploaded to our secure servers to be stored as part of your letter.",
     "privacy-perm-mic": "Microphone Access",
     "privacy-perm-mic-val":
       "We request microphone access to allow you to record voice messages for your capsules. Audio is only recorded when you actively press the record button.",
-    "privacy-perm-mic": "Microphone Access",
-    "privacy-perm-mic-val":
-      "We request microphone access to allow you to record voice messages for your capsules. Audio is only recorded when you actively press the record button.",
-    "privacy-perm-loc": "Location Access",
-    "privacy-perm-loc-val":
-      "We request location access to capture your approximate location as optional context in your capsules (e.g., weather, place name). Location is only accessed when you explicitly add location context to a capsule and is never collected in the background.",
-    "privacy-perm-camera": "Camera Access",
-    "privacy-perm-camera-val":
-      "We request camera access to allow you to take photos or record short videos directly for your capsules. The camera is only activated when you choose to capture media.",
     "privacy-perm-notif": "Push Notifications",
     "privacy-perm-notif-val":
-      "We use push notifications to alert you when your time capsules are ready to be opened. You can disable notifications in your device settings at any time.",
+      "We use push notifications to alert you when your time letters are ready to be opened. You can disable notifications in your device settings at any time.",
     "privacy-sect6": "6. Data Sharing",
     "privacy-sell": "We do not sell your personal information.",
     "privacy-sharing-desc":
@@ -164,10 +158,10 @@ const translations = {
     "privacy-sect11": "11. European Privacy Rights (GDPR)",
     "privacy-gdpr":
       "EEA residents have rights including access, rectification, erasure, and data portability.",
-    "privacy-sect12": "9. Changes to This Policy",
+    "privacy-sect12": "12. Changes to This Policy",
     "privacy-changes":
       'We may update this Privacy Policy. We will notify you of changes by updating the "Last updated" date.',
-    "privacy-sect13": "10. Contact Us",
+    "privacy-sect13": "13. Contact Us",
     "privacy-contact-text": "If you have questions about this Privacy Policy:",
     "privacy-q-title": "Privacy Questions?",
     "privacy-q-desc":
@@ -175,13 +169,13 @@ const translations = {
     // Terms Page
     "terms-title": "Terms of Service",
     "terms-intro":
-      'Please read these Terms of Service carefully before using the Time Capsule mobile application operated by Time Capsule ("we," "our," or "us").',
+      'Please read these Terms of Service carefully before using the Time Letter mobile application operated by Time Letter ("we," "our," or "us").',
     "terms-sect1": "1. Acceptance of Terms",
     "terms-accept-val":
       "By using the App, you agree to be bound by these Terms and our Privacy Policy. If you disagree, you may not use the App.",
     "terms-sect2": "2. Description of Service",
     "terms-desc-val":
-      "Time Capsule allows users to create digital time capsules containing text, photos, and audio that can be set to unlock at a future date.",
+      "Time Letter lets users create digital time letters with text, photos, videos, and audio, invite specific recipients, and unlock those memories on a future date.",
     "terms-lang-title": "Supported Languages",
     "terms-lang-val":
       "The App is available in both English and Chinese (Simplified) to serve our global user community. The language setting follows your device's system language preference.",
@@ -191,6 +185,8 @@ const translations = {
     "terms-acc-list2": "Keep your password secure",
     "terms-acc-list3": "Be at least 13 years old",
     "terms-acc-list4": "Notify us of unauthorized access",
+    "terms-acc-note":
+      "Time Letter is intended for teens and adults. If you are under the age of majority in your region, use the App only with parent or legal guardian permission where required.",
     "terms-sect4": "4. User Content",
     "terms-content-val1":
       "You retain ownership of content you create. By uploading content, you grant us a license to store and display it for the App's functionality.",
@@ -205,8 +201,44 @@ const translations = {
       "Premium features are available through paid subscriptions billed via the App Store. Subscriptions auto-renew unless cancelled. Refunds follow App Store policies.",
     "terms-sub-billing-detail":
       "Auto-renewal: each plan renews at the end of its billing period until you cancel in your Apple ID subscription settings. Upgrades within the same subscription group (for example from Pro to Max, or from monthly to annual billing) generally take effect immediately; Apple may apply proration or other adjustments as shown on the payment authorization sheet before you confirm. Downgrades or shorter billing cycles may take effect at the next renewal, as determined by Apple. Actual pricing, taxes, and subscription status are always subject to App Store and Apple Media Services terms.",
-    "terms-premium-title": "Premium Features",
-    "terms-premium-list1": "Unlimited time capsules",
+    "terms-premium-title": "Current Pro / Max Highlights",
+    "terms-premium-intro":
+      "Paid subscriptions may unlock expanded storage, higher capsule and media limits, longer unlock periods, AI-assisted writing, and other advanced features.",
+    "terms-premium-summary1": "Higher storage and usage limits",
+    "terms-premium-summary2":
+      "Longer unlock periods and advanced controls",
+    "terms-premium-summary3":
+      "AI-assisted writing and enhanced features",
+    "terms-premium-note":
+      "The specific price, billing cycle, and benefits of paid subscriptions are subject to the in-app purchase page and the App Store listing shown at the time of purchase.",
+    "terms-plan-billing-label": "Billing",
+    "terms-plan-monthly-label": "Monthly",
+    "terms-plan-annual-label": "Annual",
+    "terms-plan-pro-title": "Pro",
+    "terms-plan-pro-badge": "For consistent creators",
+    "terms-plan-pro-monthly-price": "US$1.99 / month",
+    "terms-plan-pro-annual-price": "US$14.99 / year",
+    "terms-plan-pro-save": "Save 37% yearly",
+    "terms-plan-pro-price": "US$1.99 / month · US$14.99 / year",
+    "terms-plan-pro-feature1": "50 capsules per month",
+    "terms-plan-pro-feature2": "10 GB storage",
+    "terms-plan-pro-feature3": "Single image up to 20 MB; single video up to 150 MB / 60s",
+    "terms-plan-pro-feature4": "Up to 10 reminders per capsule",
+    "terms-plan-pro-feature5": "Guardian Protocol and unlock dates up to 5 years",
+    "terms-plan-pro-feature6": "AI-guided writing",
+    "terms-plan-max-title": "Max",
+    "terms-plan-max-badge": "For heavy memory keepers",
+    "terms-plan-max-monthly-price": "US$5.99 / month",
+    "terms-plan-max-annual-price": "US$34.99 / year",
+    "terms-plan-max-save": "Save 51% yearly",
+    "terms-plan-max-price": "US$5.99 / month · US$34.99 / year",
+    "terms-plan-max-feature1": "Unlimited capsule quota",
+    "terms-plan-max-feature2": "100 GB storage",
+    "terms-plan-max-feature3": "Single image up to 50 MB; single video up to 300 MB / 60s",
+    "terms-plan-max-feature4": "Unlimited reminders per capsule",
+    "terms-plan-max-feature5": "Guardian Protocol and unlock dates up to 30 years",
+    "terms-plan-max-feature6": "AI-guided writing",
+    "terms-premium-list1": "Unlimited time letters",
     "terms-premium-list2": "Extended unlock periods (up to 10 years)",
     "terms-premium-list3": "Additional photo storage",
     "terms-premium-list4": "Priority support",
@@ -229,7 +261,7 @@ const translations = {
       "We shall not be liable for any indirect, incidental, special, or consequential damages.",
     "terms-sect10": "10. Governing Law",
     "terms-gov-val":
-      "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where Time Capsule operates, without regard to its conflict of law provisions.",
+      "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where Time Letter operates, without regard to its conflict of law provisions.",
     "terms-sect11": "11. Changes to Terms",
     "terms-changes-val":
       "We may modify these Terms at any time. Continued use after changes constitutes acceptance.",
@@ -263,7 +295,7 @@ const translations = {
     "support-info-langs": "Languages",
     "support-info-langs-val": "English, Chinese",
     // FAQ items
-    "faq-q1": "How do I create a time capsule?",
+    "faq-q1": "How do I create a time letter?",
     "faq-a1":
       'Tap the "+" button, add your content, set an unlock date, and tap "Seal Capsule".',
     "faq-q2": "Can I open a capsule before the unlock date?",
@@ -295,26 +327,26 @@ const translations = {
       "Try: 1) Force close and reopen, 2) Check internet connection, 3) Update the app, 4) Restart your device.",
     "faq-q11": "What languages does the app support?",
     "faq-a11":
-      "Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.",
+      "Time Letter supports both English and Chinese (Simplified). The app language follows your device's system language setting.",
   },
   zh: {
-    "site-title-home": "时光胶囊 - 给未来的自己发送消息",
-    "site-title-privacy": "隐私政策 - 时光胶囊",
-    "site-title-terms": "服务条款 - 时光胶囊",
-    "site-title-support": "支持中心 - 时光胶囊",
-    "site-meta-home": "使用时光胶囊创建数字胶囊，为未来保存你的回忆。",
-    "site-meta-privacy": "时光胶囊应用的隐私政策",
-    "site-meta-terms": "时光胶囊应用的服务条款",
-    "site-meta-support": "获取时光胶囊应用的帮助与支持",
+    "site-title-home": "时光寄语 - 给未来的自己发送消息",
+    "site-title-privacy": "隐私政策 - 时光寄语",
+    "site-title-terms": "服务条款 - 时光寄语",
+    "site-title-support": "支持中心 - 时光寄语",
+    "site-meta-home": "使用时光寄语创建数字寄语，为未来保存你的回忆。",
+    "site-meta-privacy": "时光寄语应用的隐私政策",
+    "site-meta-terms": "时光寄语应用的服务条款",
+    "site-meta-support": "获取时光寄语应用的帮助与支持",
     "nav-home": "首页",
     "nav-privacy": "隐私政策",
     "nav-terms": "服务条款",
     "nav-support": "支持",
-    "header-title": "时光胶囊",
-    "welcome-title": "欢迎使用时光胶囊",
-    "welcome-desc": "创建数字时光胶囊，为未来留住珍贵回忆",
+    "header-title": "时光寄语",
+    "welcome-title": "欢迎使用时光寄语",
+    "welcome-desc": "创建数字时光寄语，为未来留住珍贵回忆",
     "intro-text":
-      "时光胶囊让您捕捉当下的想法和照片，并将其锁定到未来的某个日期。写封信给未来的自己，保存特别时刻，或设定目标供日后查收。",
+      "时光寄语让您捕捉当下的想法和照片，并将其锁定到未来的某个日期。写封信给未来的自己，保存特别时刻，或设定目标供日后查收。",
     "features-title": "功能特性",
     "feat-letters-title": "撰写信件",
     "feat-letters-desc": "为未来的自己写下感人至深的文字。",
@@ -341,14 +373,15 @@ const translations = {
     "contact-title": "联系我们",
     "contact-q": "有任何疑问或反馈吗？",
     "contact-desc": "我们非常期待听到您的声音。随时给我们发邮件吧！",
-    "footer-rights": "© 2026 时光胶囊。保留所有权利。",
+    "footer-rights": "© 2026 时光寄语。保留所有权利。",
     "footer-icp": "陕ICP备2026006122号-1",
+    "footer-psb": "陕公网安备61010402001028号",
     "lang-switch": "English",
     // Privacy Page
     "privacy-title": "隐私政策",
     "privacy-last-updated": "最近更新：2026年1月",
     "privacy-intro":
-      "时光胶囊（“我们”或“我们的”）致力于保护您的隐私。本隐私政策解释了您在使用我们的移动应用程序时，我们如何收集、使用和保护您的信息。",
+      "时光寄语（“我们”或“我们的”）致力于保护您的隐私。本隐私政策解释了您在使用我们的移动应用程序时，我们如何收集、使用和保护您的信息。",
     "privacy-sect1": "1. 我们收集的信息",
     "privacy-personal-info": "您提供的信息",
     "privacy-acc-info": "账户信息：",
@@ -366,7 +399,7 @@ const translations = {
     "privacy-loc-data-val": "大致位置（如果允许）",
     "privacy-sect2": "2. 我们如何使用您的信息",
     "privacy-use-list1": "提供并维护应用功能",
-    "privacy-use-list2": "存储并同步您的时光胶囊",
+    "privacy-use-list2": "存储并同步您的时光寄语",
     "privacy-use-list3": "在胶囊开启时发送通知",
     "privacy-use-list4": "回复支持请求",
     "privacy-use-list5": "提升用户体验",
@@ -404,22 +437,13 @@ const translations = {
     "privacy-perm-why": "我们为什么请求权限",
     "privacy-perm-photo": "相册访问权限",
     "privacy-perm-photo-val":
-      "我们请求访问您的相册，以便您可以选择照片并将其添加到时光胶囊中。我们只访问您明确选择的照片——我们绝不会扫描或访问您的整个相册。选定的照片将上传到我们的安全服务器，作为胶囊的一部分进行存储。",
+      "我们请求访问您的相册，以便您可以选择照片并将其添加到时光寄语中。我们只访问您明确选择的照片——我们绝不会扫描或访问您的整个相册。选定的照片将上传到我们的安全服务器，作为寄语的一部分进行存储。",
     "privacy-perm-mic": "麦克风访问权限",
     "privacy-perm-mic-val":
       "我们请求麦克风访问权限，以便您为胶囊录制语音消息。只有在您主动点击录制按钮时才会录制音频。",
-    "privacy-perm-mic": "麦克风访问权限",
-    "privacy-perm-mic-val":
-      "我们请求麦克风访问权限，以便您为胶囊录制语音消息。只有在您主动点击录制按钮时才会录制音频。",
-    "privacy-perm-loc": "位置访问权限",
-    "privacy-perm-loc-val":
-      "我们请求位置权限，以便在您创建胶囊时可选地记录位置信息（如天气、地名）。仅在您明确添加位置信息时才会访问位置，不会在后台收集。",
-    "privacy-perm-camera": "摄像头访问权限",
-    "privacy-perm-camera-val":
-      "我们请求摄像头权限，以便您可以直接拍照或录制短视频添加到胶囊中。仅在您选择拍摄时才会启用摄像头。",
     "privacy-perm-notif": "推送通知",
     "privacy-perm-notif-val":
-      "我们使用推送通知提醒您时光胶囊已准备好开启。您可以随时在设备设置中禁用通知。",
+      "我们使用推送通知提醒您时光寄语已准备好开启。您可以随时在设备设置中禁用通知。",
     "privacy-sect6": "6. 数据共享",
     "privacy-sell": "我们不向第三方出售您的个人信息。",
     "privacy-sharing-desc":
@@ -455,23 +479,23 @@ const translations = {
     "privacy-sect11": "11. 欧洲隐私权 (GDPR)",
     "privacy-gdpr":
       "EEA 居民拥有包括访问、纠正、擦除和数据可移植性在内的权利。",
-    "privacy-sect12": "9. 政策变更",
+    "privacy-sect12": "12. 政策变更",
     "privacy-changes":
       "我们可能会更新本隐私政策。我们将通过更新“最近更新”日期来通知您变更。",
-    "privacy-sect13": "10. 联系我们",
+    "privacy-sect13": "13. 联系我们",
     "privacy-contact-text": "如果您对本隐私政策有任何疑问：",
     "privacy-q-title": "隐私疑问？",
     "privacy-q-desc": "我们致力于保护您的数据。随时联系我们！",
     // Terms Page
     "terms-title": "服务条款",
     "terms-intro":
-      "在使用由时光胶囊（“我们”或“我们的”）运营的时光胶囊移动应用程序之前，请仔细阅读这些服务条款。",
+      "在使用由时光寄语（“我们”或“我们的”）运营的时光寄语移动应用程序之前，请仔细阅读这些服务条款。",
     "terms-sect1": "1. 接受条款",
     "terms-accept-val":
       "通过使用本应用，您同意接受这些条款和我们的隐私政策的约束。如果您不同意，则不得使用本应用。",
     "terms-sect2": "2. 服务描述",
     "terms-desc-val":
-      "时光胶囊允许用户创建包含文字、照片和音频的数字时光胶囊，并可设置为在未来某个日期开启。",
+      "时光寄语允许用户创建包含文字、照片、视频和音频的数字时光寄语，可邀请指定接收人，并在未来某个日期开启这些记忆。",
     "terms-lang-title": "支持的语言",
     "terms-lang-val":
       "本应用提供英文和中文（简体）版本，以服务全球用户社区。语言设置遵循您的设备系统语言偏好。",
@@ -481,6 +505,8 @@ const translations = {
     "terms-acc-list2": "保护好您的密码安全",
     "terms-acc-list3": "年满 13 周岁",
     "terms-acc-list4": "在发现未经授权的访问时通知我们",
+    "terms-acc-note":
+      "时光寄语更适合青少年及成年人使用。如您未满所在地区成年年龄，请在当地法律要求的情况下取得父母或法定监护人同意后再使用本应用。",
     "terms-sect4": "4. 用户内容",
     "terms-content-val1":
       "您保留对所创建内容的所有权。通过上传内容，您授予我们存储并展示该内容以实现应用功能的许可。",
@@ -495,8 +521,42 @@ const translations = {
       "高级功能可通过 App Store 计费的付费订阅获得。除非取消，否则订阅将自动续订。退款遵循 App Store 政策。",
     "terms-sub-billing-detail":
       "自动续订：各方案会在当前计费周期结束后自动续费，直至您在 Apple ID 的订阅设置中关闭自动续费。同一订阅组内的升级（例如由 Pro 升至 Max，或由月付改为年付）通常即时生效；Apple 可能在您确认付款前的授权界面中展示按比例折算或其他计费调整。降级或缩短计费周期可能于下一续订日起生效，具体以 Apple 规则为准。价格、税费及订阅状态以 App Store 与 Apple 媒体服务条款为准。",
-    "terms-premium-title": "高级功能",
-    "terms-premium-list1": "无限时光胶囊",
+    "terms-premium-title": "当前 Pro / Max 方案亮点",
+    "terms-premium-intro":
+      "付费订阅可能解锁更高存储、更高胶囊与媒体额度、更长解锁期限、AI 辅助写作及其他高级功能。",
+    "terms-premium-summary1": "更高存储与使用额度",
+    "terms-premium-summary2": "更长解锁期限与高级控制",
+    "terms-premium-summary3": "AI 辅助写作等增强功能",
+    "terms-premium-note":
+      "付费订阅的具体价格、周期和权益，以 App 内购买页面和 App Store 展示为准。",
+    "terms-plan-billing-label": "计费",
+    "terms-plan-monthly-label": "月付",
+    "terms-plan-annual-label": "年付",
+    "terms-plan-pro-title": "Pro",
+    "terms-plan-pro-badge": "适合持续记录",
+    "terms-plan-pro-monthly-price": "US$1.99 / 月",
+    "terms-plan-pro-annual-price": "US$14.99 / 年",
+    "terms-plan-pro-save": "年付省 37%",
+    "terms-plan-pro-price": "US$1.99 / 月 · US$14.99 / 年",
+    "terms-plan-pro-feature1": "每月 50 个时光寄语",
+    "terms-plan-pro-feature2": "10 GB 存储空间",
+    "terms-plan-pro-feature3": "单图最大 20 MB；单视频最大 150 MB / 60 秒",
+    "terms-plan-pro-feature4": "每个胶囊最多 10 次提醒",
+    "terms-plan-pro-feature5": "时光契约 + 最长 5 年解锁日期",
+    "terms-plan-pro-feature6": "AI 辅助写作",
+    "terms-plan-max-title": "Max",
+    "terms-plan-max-badge": "适合重度记录",
+    "terms-plan-max-monthly-price": "US$5.99 / 月",
+    "terms-plan-max-annual-price": "US$34.99 / 年",
+    "terms-plan-max-save": "年付省 51%",
+    "terms-plan-max-price": "US$5.99 / 月 · US$34.99 / 年",
+    "terms-plan-max-feature1": "胶囊额度无上限",
+    "terms-plan-max-feature2": "100 GB 存储空间",
+    "terms-plan-max-feature3": "单图最大 50 MB；单视频最大 300 MB / 60 秒",
+    "terms-plan-max-feature4": "每个胶囊提醒次数无限",
+    "terms-plan-max-feature5": "时光契约 + 最长 30 年解锁日期",
+    "terms-plan-max-feature6": "AI 辅助写作",
+    "terms-premium-list1": "无限时光寄语",
     "terms-premium-list2": "延长开启期限（长达 10 年）",
     "terms-premium-list3": "额外的照片存储空间",
     "terms-premium-list4": "优先支持",
@@ -518,7 +578,7 @@ const translations = {
     "terms-limit-val": "我们对任何间接、偶然、特殊或后果性损害不承担任何责任。",
     "terms-sect10": "10. 适用法律",
     "terms-gov-val":
-      "这些条款应受时光胶囊运营所在司法管辖区的法律管辖并按其解释，而不考虑其法律冲突条款。",
+      "这些条款应受时光寄语运营所在司法管辖区的法律管辖并按其解释，而不考虑其法律冲突条款。",
     "terms-sect11": "11. 条款变更",
     "terms-changes-val": "我们可能随时修改这些条款。变更后继续使用即视为接受。",
     "terms-sect12": "12. 联系我们",
@@ -550,7 +610,7 @@ const translations = {
     "support-info-langs": "语言",
     "support-info-langs-val": "英文、中文",
     // FAQ items
-    "faq-q1": "如何创建时光胶囊？",
+    "faq-q1": "如何创建时光寄语？",
     "faq-a1": "点击“+”按钮，添加您的内容，设置开启日期，然后点击“封存胶囊”。",
     "faq-q2": "我可以在开启日期之前打开胶囊吗？",
     "faq-a2": "不可以，封存后的胶囊无法提前打开。这是为了保留那份惊喜！",
@@ -577,7 +637,7 @@ const translations = {
       "尝试：1) 强制关闭并重新打开，2) 检查网络连接，3) 更新应用，4) 重启设备。",
     "faq-q11": "应用支持哪些语言？",
     "faq-a11":
-      "时光胶囊支持英文和中文（简体）。应用语言遵循您的设备系统语言设置。",
+      "时光寄语支持英文和中文（简体）。应用语言遵循您的设备系统语言设置。",
   },
 };
 
@@ -617,12 +677,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const langToUse = urlLang && translations[urlLang] ? urlLang : savedLang || "en";
   applyTranslations(langToUse);
 
-  // Add toggle button listener if it exists
-  const toggleBtn = document.getElementById("lang-toggle");
-  if (toggleBtn) {
+  document.querySelectorAll(".lang-toggle-btn").forEach((toggleBtn) => {
     toggleBtn.addEventListener("click", (e) => {
       e.preventDefault();
       toggleLanguage();
     });
-  }
+  });
 });
+                                                                                                                                                              

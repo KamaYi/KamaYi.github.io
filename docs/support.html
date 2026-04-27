@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- 宓屽叆妯″紡锛?embed=1 鏃堕殣钘忓鑸爮涓庡簳閮ㄥ鑸紝閬垮厤 WebView 鍐呴噸澶嶅鑸?-->
+    <script>if(location.search.includes('embed=1'))document.write('<style>nav,#nav-menu,footer{display:none!important}</style>');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site-title-support">Support - Time Capsule</title>
-    <meta name="description" data-i18n-content="site-meta-support" content="Get help and support for Time Capsule App">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+    <title data-i18n="site-title-support">Support - Time Letter</title>
+    <meta name="description" data-i18n-content="site-meta-support" content="Get help and support for Time Letter App">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="i18n.js"></script>
     <script>
@@ -29,26 +32,60 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
-                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
-            </a>
+    <nav class="sticky top-0 z-50 relative w-full bg-surface/80 backdrop-blur-md border-b border-border">
+        <div class="grid grid-cols-3 items-center gap-x-2 px-3 py-2.5 md:hidden">
+            <div class="flex min-w-0 justify-start">
+                <a href="index.html" class="flex items-center gap-1.5 group -ml-0.5 shrink-0" aria-label="Home">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                </a>
+            </div>
+            <div class="min-w-0 flex justify-center px-0.5">
+                <span class="block w-full truncate text-center text-base font-bold leading-snug tracking-tight text-slate-100" data-i18n="nav-support">Support</span>
+            </div>
+            <div class="flex min-w-0 justify-end items-center gap-1.5">
+                <button id="menu-toggle" type="button" aria-label="Menu" class="text-slate-100 bg-slate-700/50 border border-border h-10 w-10 rounded-lg transition-all hover:bg-primary inline-flex items-center justify-center shrink-0 p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border h-10 text-xs font-medium px-2.5 rounded-lg transition-all hover:bg-primary whitespace-nowrap shrink-0 inline-flex items-center justify-center" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex items-center justify-center flex-1 gap-2 md:gap-4 mx-4">
-            <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
-            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
-            <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
-            <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Support</a>
+        <div class="hidden md:flex w-full items-center gap-4 px-8 py-3">
+            <div class="shrink-0">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block" data-i18n="header-title">Time Letter</span>
+                </a>
+            </div>
+            <div class="flex flex-1 justify-center items-center gap-4">
+                <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="text-slate-100 bg-primary text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Support</a>
+            </div>
+            <div class="shrink-0">
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex justify-end">
-            <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
-                <span>🌐</span>
-                <span>中文</span>
-            </button>
+        <div id="nav-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-[#1E293B] border-b border-[#334155] shadow-2xl">
+            <div class="flex flex-col divide-y divide-border/80">
+                <a href="index.html" data-i18n="nav-home" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-100 bg-primary transition-colors hover:bg-primary-dark">Support</a>
+            </div>
         </div>
     </nav>
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function (e) { e.stopPropagation(); menu.classList.toggle('hidden'); });
+            document.addEventListener('click', function () { menu.classList.add('hidden'); });
+        })();
+    </script>
 
     <header class="relative overflow-hidden text-center py-20 px-6 border-b border-border">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-bg to-violet-600/20"></div>
@@ -58,10 +95,10 @@
         
         <div class="relative">
             <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
-                <span class="text-5xl">💊</span>
+                <img src="favicon.png" alt="Time Letter" class="h-14 w-14 rounded-[1.1rem] shadow-2xl shadow-primary/20">
             </div>
             <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
-                Time Capsule
+                Time Letter
             </h1>
         </div>
     </header>
@@ -82,7 +119,7 @@
             <p data-i18n="support-q-desc" class="text-slate-400 text-sm mb-8 pb-6 border-b border-border/50">Find answers to common questions or contact us</p>
 
             <div class="flex items-center gap-3 mt-8 mb-6">
-                <span class="text-xl">❓</span>
+                <span class="text-xl">鉂?/span>
                 <h2 data-i18n="support-faq-title" class="text-2xl font-semibold">Frequently Asked Questions</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
@@ -90,15 +127,15 @@
         <div class="space-y-3">
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q1" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">➕</span>
-                    How do I create a time capsule?
+                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">鉃?/span>
+                    How do I create a time letter?
                 </h4>
                 <p data-i18n="faq-a1" class="text-slate-400 text-sm pl-8">Tap the "+" button, add your content, set an unlock date, and tap "Seal Capsule".</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q2" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">🔓</span>
+                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">馃敁</span>
                     Can I open a capsule before the unlock date?
                 </h4>
                 <p data-i18n="faq-a2" class="text-slate-400 text-sm pl-8">No, sealed capsules cannot be opened early. This preserves the surprise!</p>
@@ -106,7 +143,7 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q3" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">🔔</span>
+                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">馃敂</span>
                     What happens when my capsule unlocks?
                 </h4>
                 <p data-i18n="faq-a3" class="text-slate-400 text-sm pl-8">You'll receive a notification. Tap it to view your capsule's contents.</p>
@@ -114,7 +151,7 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q4" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-emerald-500/20 rounded-lg flex items-center justify-center text-xs text-emerald-400">🔒</span>
+                    <span class="w-6 h-6 bg-emerald-500/20 rounded-lg flex items-center justify-center text-xs text-emerald-400">馃敀</span>
                     Is my data secure?
                 </h4>
                 <p data-i18n="faq-a4" class="text-slate-400 text-sm pl-8">Yes! Your data is encrypted during transmission (TLS/SSL) and stored securely on cloud servers with encryption. Only you can access your content through your authenticated account.</p>
@@ -122,7 +159,7 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q5" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">📅</span>
+                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">馃搮</span>
                     How long will my data be stored?
                 </h4>
                 <p data-i18n="faq-a5" class="text-slate-400 text-sm pl-8">Your capsule content is stored until the capsule unlocks and you delete it, or until you delete your account. We retain your data as long as you need it.</p>
@@ -130,7 +167,7 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q6" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">🛡️</span>
+                    <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">馃洝锔?/span>
                     What is a "Time Contract"?
                 </h4>
                 <p data-i18n="faq-a6" class="text-slate-400 text-sm pl-8">A Time Contract (Prevent Deletion) makes your capsule permanent. Once signed and sealed, the capsule cannot be deleted by you or the recipient, even after it unlocks. It's designed for preserving irreplaceable memories.</p>
@@ -138,7 +175,7 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q7" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xs text-cyan-400">⚡</span>
+                    <span class="w-6 h-6 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xs text-cyan-400">鈿?/span>
                     How does "Time Continuation" work?
                 </h4>
                 <p data-i18n="faq-a7" class="text-slate-400 text-sm pl-8">If you're inactive for 6 months, capsules with this feature enabled will be automatically delivered to your chosen recipients early. This ensures your messages reach their destination even if you're unable to access the app.</p>
@@ -146,23 +183,23 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q8" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center text-xs text-red-400">🗑️</span>
+                    <span class="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center text-xs text-red-400">馃棏锔?/span>
                     How do I delete my account?
                 </h4>
-                <p data-i18n="faq-a8" class="text-slate-400 text-sm pl-8">Go to Settings → Account → Delete Account. Your data will be permanently removed within 30 days.</p>
+                <p data-i18n="faq-a8" class="text-slate-400 text-sm pl-8">Go to Settings 鈫?Account 鈫?Delete Account. Your data will be permanently removed within 30 days.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q9" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">💳</span>
+                    <span class="w-6 h-6 bg-primary/20 rounded-lg flex items-center justify-center text-xs text-primary-400">馃挸</span>
                     How do I cancel my subscription?
                 </h4>
-                <p data-i18n="faq-a9" class="text-slate-400 text-sm pl-8">Manage subscriptions in your device Settings → Apple ID → Subscriptions.</p>
+                <p data-i18n="faq-a9" class="text-slate-400 text-sm pl-8">Manage subscriptions in your device Settings 鈫?Apple ID 鈫?Subscriptions.</p>
             </div>
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q10" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">⚠️</span>
+                    <span class="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center text-xs text-amber-400">鈿狅笍</span>
                     The app isn't working. What should I do?
                 </h4>
                 <p data-i18n="faq-a10" class="text-slate-400 text-sm pl-8">Try: 1) Force close and reopen, 2) Check internet connection, 3) Update the app, 4) Restart your device.</p>
@@ -170,15 +207,15 @@
 
             <div class="group bg-gradient-to-br from-surface to-surface/50 border border-border/50 rounded-xl p-5 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                 <h4 data-i18n="faq-q11" class="text-slate-100 font-medium mb-2 flex items-center gap-2">
-                    <span class="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center text-xs text-blue-400">🌐</span>
+                    <span class="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center text-xs text-blue-400">馃寪</span>
                     What languages does the app support?
                 </h4>
-                <p data-i18n="faq-a11" class="text-slate-400 text-sm pl-8">Time Capsule supports both English and Chinese (Simplified). The app language follows your device's system language setting.</p>
+                <p data-i18n="faq-a11" class="text-slate-400 text-sm pl-8">Time Letter supports both English and Chinese (Simplified). The app language follows your device's system language setting.</p>
             </div>
         </div>
 
             <div class="flex items-center gap-3 mt-12 mb-6">
-                <span class="text-xl">📝</span>
+                <span class="text-xl">馃摑</span>
                 <h2 data-i18n="support-feedback-title" class="text-2xl font-semibold">Submit Feedback</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
@@ -243,7 +280,7 @@
         </div>
 
             <div class="flex items-center gap-3 mt-12 mb-6">
-                <span class="text-xl">📱</span>
+                <span class="text-xl">馃摫</span>
                 <h2 data-i18n="support-info-title" class="text-2xl font-semibold">App Information</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
@@ -266,16 +303,19 @@
     </main>
 
     <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
+        <div id="footer-tabs" class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
             <a href="index.html" data-i18n="nav-home" class="hover:text-primary transition-colors">Home</a>
             <a href="privacy.html" data-i18n="nav-privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="text-primary">Support</a>
         </div>
-        <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
-        <p class="mt-2">
+        <p data-i18n="footer-rights">© 2026 Time Letter. All rights reserved.</p>
+        <p class="mt-2 flex justify-center gap-6 flex-wrap">
             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-                <span data-i18n="footer-icp">陕ICP备2026006122号-1</span>
+                <span data-i18n="footer-icp">闄旾CP澶?026006122鍙?1</span>
+            </a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010402001028" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                <span data-i18n="footer-psb">闄曞叕缃戝畨澶?1010402001028鍙?/span>
             </a>
         </p>
     </footer>
@@ -391,12 +431,12 @@
                     div.appendChild(img);
                 } else {
                     div.className += ' flex items-center justify-center';
-                    div.innerHTML = '<span class="text-2xl">🎬</span>';
+                    div.innerHTML = '<span class="text-2xl">馃幀</span>';
                 }
 
                 const removeBtn = document.createElement('button');
                 removeBtn.className = 'absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity';
-                removeBtn.innerHTML = '✕';
+                removeBtn.innerHTML = '鉁?;
                 removeBtn.onclick = (e) => {
                     e.preventDefault();
                     selectedFiles.splice(index, 1);

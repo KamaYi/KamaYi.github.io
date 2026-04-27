@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- 宓屽叆妯″紡锛?embed=1 鏃堕殣钘忓鑸爮涓庡簳閮ㄥ鑸紝閬垮厤 WebView 鍐呴噸澶嶅鑸?-->
+    <script>if(location.search.includes('embed=1'))document.write('<style>nav,#nav-menu,footer{display:none!important}</style>');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site-title-privacy">Privacy Policy - Time Capsule</title>
-    <meta name="description" data-i18n-content="site-meta-privacy" content="Privacy Policy for Time Capsule App">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+    <title data-i18n="site-title-privacy">Privacy Policy - Time Letter</title>
+    <meta name="description" data-i18n-content="site-meta-privacy" content="Privacy Policy for Time Letter App">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="i18n.js"></script>
     <script>
@@ -29,26 +32,60 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
-                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
-            </a>
+    <nav class="sticky top-0 z-50 relative w-full bg-surface/80 backdrop-blur-md border-b border-border">
+        <div class="grid grid-cols-3 items-center gap-x-2 px-3 py-2.5 md:hidden">
+            <div class="flex min-w-0 justify-start">
+                <a href="index.html" class="flex items-center gap-1.5 group -ml-0.5 shrink-0" aria-label="Home">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                </a>
+            </div>
+            <div class="min-w-0 flex justify-center px-0.5">
+                <span class="block w-full truncate text-center text-base font-bold leading-snug tracking-tight text-slate-100" data-i18n="privacy-title">Privacy Policy</span>
+            </div>
+            <div class="flex min-w-0 justify-end items-center gap-1.5">
+                <button id="menu-toggle" type="button" aria-label="Menu" class="text-slate-100 bg-slate-700/50 border border-border h-10 w-10 rounded-lg transition-all hover:bg-primary inline-flex items-center justify-center shrink-0 p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border h-10 text-xs font-medium px-2.5 rounded-lg transition-all hover:bg-primary whitespace-nowrap shrink-0 inline-flex items-center justify-center" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex items-center justify-center flex-1 gap-2 md:gap-4 mx-4">
-            <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
-            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Privacy</a>
-            <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
-            <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+        <div class="hidden md:flex w-full items-center gap-4 px-8 py-3">
+            <div class="shrink-0">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block" data-i18n="header-title">Time Letter</span>
+                </a>
+            </div>
+            <div class="flex flex-1 justify-center items-center gap-4">
+                <a href="index.html" data-i18n="nav-home" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-100 bg-primary text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
+            <div class="shrink-0">
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex justify-end">
-            <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
-                <span>🌐</span>
-                <span>中文</span>
-            </button>
+        <div id="nav-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-[#1E293B] border-b border-[#334155] shadow-2xl">
+            <div class="flex flex-col divide-y divide-border/80">
+                <a href="index.html" data-i18n="nav-home" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-100 bg-primary transition-colors hover:bg-primary-dark">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
         </div>
     </nav>
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function (e) { e.stopPropagation(); menu.classList.toggle('hidden'); });
+            document.addEventListener('click', function () { menu.classList.add('hidden'); });
+        })();
+    </script>
 
     <header class="relative overflow-hidden text-center py-20 px-6 border-b border-border">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-bg to-violet-600/20"></div>
@@ -58,10 +95,10 @@
         
         <div class="relative">
             <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
-                <span class="text-5xl">💊</span>
+                <img src="favicon.png" alt="Time Letter" class="h-14 w-14 rounded-[1.1rem] shadow-2xl shadow-primary/20">
             </div>
             <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
-                Time Capsule
+                Time Letter
             </h1>
         </div>
     </header>
@@ -80,7 +117,7 @@
             <div class="relative bg-gradient-to-br from-surface/80 to-surface/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-10 shadow-xl shadow-primary/5">
                 <div class="absolute top-4 right-4 w-16 h-16 bg-primary/10 rounded-full blur-xl"></div>
                 <p data-i18n="privacy-intro" class="relative text-slate-300 leading-relaxed text-lg">
-                    Time Capsule ("we," "our," or "us") is committed to protecting your privacy.
+                    Time Letter ("we," "our," or "us") is committed to protecting your privacy.
                     This Privacy Policy explains how we collect, use, and safeguard your information
                     when you use our mobile application.
                 </p>
@@ -89,7 +126,7 @@
             <div class="space-y-12">
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">📋</span>
+                        <span class="text-xl">馃搵</span>
                         <h2 data-i18n="privacy-sect1" class="text-2xl font-semibold">1. Information We Collect</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -123,35 +160,35 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">⚙️</span>
+                        <span class="text-xl">鈿欙笍</span>
                         <h2 data-i18n="privacy-sect2" class="text-2xl font-semibold">2. How We Use Your Information</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list1">Provide and maintain App functionality</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list1">Provide and maintain App functionality</span>
                         </li>
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list2">Store and sync time capsules</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list2">Store and sync time letters</span>
                         </li>
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list3">Send notifications when capsules unlock</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list3">Send notifications when capsules unlock</span>
                         </li>
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list4">Respond to support requests</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list4">Respond to support requests</span>
                         </li>
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list5">Improve user experience</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list5">Improve user experience</span>
                         </li>
                         <li class="bg-surface/50 border border-border/50 rounded-xl p-4 flex items-center gap-3 text-slate-300">
-                            <span class="text-primary">✔</span> <span data-i18n="privacy-use-list6">Detect and prevent security issues</span>
+                            <span class="text-primary">鉁?/span> <span data-i18n="privacy-use-list6">Detect and prevent security issues</span>
                         </li>
                     </ul>
                 </section>
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">🔐</span>
+                        <span class="text-xl">馃攼</span>
                         <h2 data-i18n="privacy-sect3" class="text-2xl font-semibold">3. Data Storage and Security</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -159,7 +196,7 @@
                     <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-8 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
                         <h4 class="text-emerald-400 font-semibold mb-4 text-lg flex items-center gap-3">
-                            <span class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-base">🛡️</span>
+                            <span class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-base">馃洝锔?/span>
                             <span data-i18n="privacy-encryption">Data Encryption</span>
                         </h4>
                         <p data-i18n="privacy-encryption-desc" class="text-slate-300 mb-6 leading-relaxed">
@@ -182,7 +219,7 @@
                     </div>
 
                     <div class="mt-6 flex items-start gap-4 p-5 bg-amber-500/5 border border-amber-500/20 rounded-2xl">
-                        <span class="text-xl">⚠️</span>
+                        <span class="text-xl">鈿狅笍</span>
                         <div>
                             <h4 data-i18n="privacy-note" class="text-amber-400 font-semibold mb-1">Note</h4>
                             <p data-i18n="privacy-note-val" class="text-slate-400 text-sm">No method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
@@ -192,7 +229,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">📦</span>
+                        <span class="text-xl">馃摝</span>
                         <h2 data-i18n="privacy-sect4" class="text-2xl font-semibold">4. Data Retention Policy</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -218,27 +255,27 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">📱</span>
+                        <span class="text-xl">馃摫</span>
                         <h2 data-i18n="privacy-sect5" class="text-2xl font-semibold">5. App Permissions</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
                     <div class="space-y-4">
                         <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
-                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🖼️</div>
+                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">馃柤锔?/div>
                             <div>
                                 <h4 data-i18n="privacy-perm-photo" class="text-slate-100 font-semibold mb-2 text-lg">Photo Library Access</h4>
                                 <p data-i18n="privacy-perm-photo-val" class="text-slate-400 text-sm leading-relaxed">
-                                    We request access to your Photo Library so you can select and add photos to your time capsules. 
+                                    We request access to your Photo Library so you can select and add photos to your time letters. 
                                     We only access photos you explicitly select - we never scan or access your entire photo library.
                                 </p>
                             </div>
                         </div>
                         <div class="bg-surface/50 border border-border/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6">
-                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔔</div>
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">馃敂</div>
                             <div>
                                 <h4 data-i18n="privacy-perm-notif" class="text-slate-100 font-semibold mb-2 text-lg">Push Notifications</h4>
                                 <p data-i18n="privacy-perm-notif-val" class="text-slate-400 text-sm leading-relaxed">
-                                    We use push notifications to alert you when your time capsules are ready to be opened. 
+                                    We use push notifications to alert you when your time letters are ready to be opened. 
                                     You can disable notifications in your settings at any time.
                                 </p>
                             </div>
@@ -248,7 +285,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">🔄</span>
+                        <span class="text-xl">馃攧</span>
                         <h2 data-i18n="privacy-sect6" class="text-2xl font-semibold">6. Data Sharing</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -262,7 +299,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">⚖️</span>
+                        <span class="text-xl">鈿栵笍</span>
                         <h2 data-i18n="privacy-sect7" class="text-2xl font-semibold">7. Your Rights</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -300,7 +337,7 @@
 
                 <section>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xl">👶</span>
+                        <span class="text-xl">馃懚</span>
                         <h2 data-i18n="privacy-sect8" class="text-2xl font-semibold">8. Children's Privacy</h2>
                         <div class="flex-1 h-px bg-gradient-to-r from-border to-transparent ml-4"></div>
                     </div>
@@ -331,16 +368,19 @@
     </main>
 
     <footer class="text-center py-12 px-6 border-t border-border text-slate-400 text-sm">
-        <div class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
+        <div id="footer-tabs" class="flex justify-center gap-8 mb-6 flex-wrap font-medium">
             <a href="index.html" data-i18n="nav-home" class="hover:text-primary transition-colors">Home</a>
             <a href="privacy.html" data-i18n="nav-privacy" class="text-primary">Privacy Policy</a>
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
         </div>
-        <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
-        <p class="mt-2">
+        <p data-i18n="footer-rights">© 2026 Time Letter. All rights reserved.</p>
+        <p class="mt-2 flex justify-center gap-6 flex-wrap">
             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-                <span data-i18n="footer-icp">陕ICP备2026006122号-1</span>
+                <span data-i18n="footer-icp">闄旾CP澶?026006122鍙?1</span>
+            </a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010402001028" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                <span data-i18n="footer-psb">闄曞叕缃戝畨澶?1010402001028鍙?/span>
             </a>
         </p>
     </footer>

@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- 宓屽叆妯″紡锛?embed=1 鏃堕殣钘忓鑸爮锛岄伩鍏?WebView 鍐呭弻閲嶅ご閮?-->
+    <script>if(location.search.includes('embed=1'))document.write('<style>nav,#nav-menu{display:none!important}</style>');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site-title-home">Time Capsule - Send Messages to Your Future Self</title>
-    <meta name="description" data-i18n-content="site-meta-home" content="Create digital time capsules and preserve your memories for the future with Time Capsule App.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+    <title data-i18n="site-title-home">Time Letter - Send Messages to Your Future Self</title>
+    <meta name="description" data-i18n-content="site-meta-home" content="Create digital time letters and preserve your memories for the future with Time Letter App.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="i18n.js"></script>
     <script>
@@ -29,26 +32,62 @@
 
 <body class="bg-bg text-slate-100 font-sans min-h-screen">
 
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-surface/80 backdrop-blur-md border-b border-border transition-all duration-300">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="text-2xl group-hover:scale-110 transition-transform">💊</span>
-                <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block">Time Capsule</span>
-            </a>
+    <nav class="sticky top-0 z-50 relative w-full bg-surface/80 backdrop-blur-md border-b border-border">
+        <!-- 灏忓睆锛氫笁绛夊垎鍒楋紝鏍囬鍦ㄤ腑闂村垪鍑犱綍灞呬腑 -->
+        <div class="grid grid-cols-3 items-center gap-x-2 px-3 py-2.5 md:hidden">
+            <div class="flex min-w-0 justify-start">
+                <a href="index.html" class="flex items-center gap-1.5 group -ml-0.5 shrink-0" aria-label="Home">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                </a>
+            </div>
+            <div class="min-w-0 flex justify-center px-0.5">
+                <span class="block w-full truncate text-center text-base font-bold leading-snug tracking-tight text-slate-100" data-i18n="header-title">Time Letter</span>
+            </div>
+            <div class="flex min-w-0 justify-end items-center gap-1.5">
+                <button id="menu-toggle" type="button" aria-label="Menu" class="text-slate-100 bg-slate-700/50 border border-border h-10 w-10 rounded-lg transition-all hover:bg-primary inline-flex items-center justify-center shrink-0 p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border h-10 text-xs font-medium px-2.5 rounded-lg transition-all hover:bg-primary whitespace-nowrap shrink-0 inline-flex items-center justify-center" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex items-center justify-center flex-1 gap-2 md:gap-4 mx-4">
-            <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Home</a>
-            <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
-            <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
-            <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+        <!-- 澶у睆 -->
+        <div class="hidden md:flex w-full items-center gap-4 px-8 py-3">
+            <div class="shrink-0">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="favicon.png" alt="Time Letter" class="h-8 w-8 rounded-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-lg bg-gradient-to-r from-white to-primary bg-clip-text text-transparent hidden sm:block" data-i18n="header-title">Time Letter</span>
+                </a>
+            </div>
+            <div class="flex flex-1 justify-center items-center gap-4">
+                <a href="index.html" data-i18n="nav-home" class="text-slate-100 bg-primary text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary-dark shadow-lg shadow-primary/20">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="text-slate-400 text-sm font-medium px-3 py-2 rounded-lg transition-all hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
+            <div class="shrink-0">
+                <button type="button" class="lang-toggle-btn text-slate-100 bg-slate-700/50 border border-border text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary whitespace-nowrap" data-i18n="lang-switch">涓枃</button>
+            </div>
         </div>
-        <div class="flex justify-end">
-            <button id="lang-toggle" data-i18n="lang-switch" class="text-slate-100 bg-slate-700/50 border border-border text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all hover:bg-primary flex items-center gap-2">
-                <span>🌐</span>
-                <span>中文</span>
-            </button>
+        <div id="nav-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-[#1E293B] border-b border-[#334155] shadow-2xl">
+            <div class="flex flex-col divide-y divide-border/80">
+                <a href="index.html" data-i18n="nav-home" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-100 bg-primary transition-colors hover:bg-primary-dark">Home</a>
+                <a href="privacy.html" data-i18n="nav-privacy" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Privacy</a>
+                <a href="terms.html" data-i18n="nav-terms" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Terms</a>
+                <a href="support.html" data-i18n="nav-support" class="flex w-full min-h-14 items-center px-4 text-base font-medium text-slate-400 transition-colors hover:text-slate-100 hover:bg-primary/20">Support</a>
+            </div>
         </div>
     </nav>
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function (e) { e.stopPropagation(); menu.classList.toggle('hidden'); });
+            document.addEventListener('click', function () { menu.classList.add('hidden'); });
+        })();
+    </script>
 
     <header class="relative overflow-hidden text-center py-24 px-6 border-b border-border">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-bg to-violet-600/20"></div>
@@ -57,26 +96,21 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-violet-500/5 rounded-full blur-3xl"></div>
         
         <div class="relative">
-            <div class="inline-flex items-center justify-center w-24 h-24 mb-8 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-[2.5rem] backdrop-blur-sm border border-white/10 shadow-2xl">
-                <span class="text-6xl">💊</span>
+            <div class="inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br from-primary/20 to-violet-500/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
+                <img src="favicon.png" alt="Time Letter" class="h-14 w-14 rounded-[1.1rem] shadow-2xl shadow-primary/20">
             </div>
-            <h1 data-i18n="header-title" class="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
-                Time Capsule
+            <h1 data-i18n="header-title" class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-primary to-violet-400 bg-clip-text text-transparent drop-shadow-lg">
+                Time Letter
             </h1>
-            <div class="mt-8 flex justify-center gap-3">
-                <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-pulse delay-100"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse delay-200"></span>
-            </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 py-20">
         <section class="text-center mb-24 relative">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-            <h2 data-i18n="welcome-title" class="text-4xl font-bold mb-6 text-slate-100">Welcome to Time Capsule</h2>
+            <h2 data-i18n="welcome-title" class="text-4xl font-bold mb-6 text-slate-100">Welcome to Time Letter</h2>
             <p data-i18n="intro-text" class="text-slate-300 leading-relaxed max-w-3xl mx-auto text-lg">
-                Time Capsule lets you capture your thoughts and photos today and lock them away until a future date. Write letters to your future self, preserve special moments, or set goals to check on later.
+                Time Letter lets you capture your thoughts and photos today and lock them away until a future date. Write letters to your future self, preserve special moments, or set goals to check on later.
             </p>
         </section>
 
@@ -89,77 +123,77 @@
                 <!-- Feature Cards -->
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">📝</div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃摑</div>
                     <h3 data-i18n="feat-letters-title" class="text-xl font-semibold mb-3 text-slate-100">Write Letters</h3>
                     <p data-i18n="feat-letters-desc" class="text-slate-400 leading-relaxed">Compose heartfelt messages to your future self.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-violet-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">📷</div>
+                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃摲</div>
                     <h3 data-i18n="feat-photos-title" class="text-xl font-semibold mb-3 text-slate-100">Add Photos</h3>
                     <p data-i18n="feat-photos-desc" class="text-slate-400 leading-relaxed">Include up to 9 photos to capture the moment.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⏰</div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">鈴?/div>
                     <h3 data-i18n="feat-dates-title" class="text-xl font-semibold mb-3 text-slate-100">Set Unlock Dates</h3>
                     <p data-i18n="feat-dates-desc" class="text-slate-400 leading-relaxed">Choose when to unlock, from 30 days to 10 years.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-violet-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🔔</div>
+                    <div class="w-14 h-14 mb-6 bg-violet-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃敂</div>
                     <h3 data-i18n="feat-notified-title" class="text-xl font-semibold mb-3 text-slate-100">Get Notified</h3>
                     <p data-i18n="feat-notified-desc" class="text-slate-400 leading-relaxed">Receive notifications when capsules unlock.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-emerald-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🛡️</div>
+                    <div class="w-14 h-14 mb-6 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃洝锔?/div>
                     <h3 data-i18n="feat-contract-title" class="text-xl font-semibold mb-3 text-slate-100">Time Contract</h3>
                     <p data-i18n="feat-contract-desc" class="text-slate-400 leading-relaxed">Lock your memories forever. Signed capsules can never be deleted.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-amber-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-amber-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⏳</div>
+                    <div class="w-14 h-14 mb-6 bg-amber-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">鈴?/div>
                     <h3 data-i18n="feat-continuation-title" class="text-xl font-semibold mb-3 text-slate-100">Time Continuation</h3>
                     <p data-i18n="feat-continuation-desc" class="text-slate-400 leading-relaxed">Automatic delivery if you're inactive for long periods.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-pink-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-pink-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">💑</div>
+                    <div class="w-14 h-14 mb-6 bg-pink-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃拺</div>
                     <h3 data-i18n="feat-couple-title" class="text-xl font-semibold mb-3 text-slate-100">Couple Mode</h3>
                     <p data-i18n="feat-couple-desc" class="text-slate-400 leading-relaxed">Create shared timelines and memories with your partner.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-cyan-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">✨</div>
+                    <div class="w-14 h-14 mb-6 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">鉁?/div>
                     <h3 data-i18n="feat-blur-title" class="text-xl font-semibold mb-3 text-slate-100">Privacy Blur</h3>
                     <p data-i18n="feat-blur-desc" class="text-slate-400 leading-relaxed">Gaussian blur protects your sealed content until the very end.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-blue-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">⭐</div>
+                    <div class="w-14 h-14 mb-6 bg-blue-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">猸?/div>
                     <h3 data-i18n="feat-max-title" class="text-xl font-semibold mb-3 text-slate-100">Max Plan</h3>
                     <p data-i18n="feat-max-desc" class="text-slate-400 leading-relaxed">Unlimited capsules and premium storage for power users.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-indigo-500/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🌐</div>
+                    <div class="w-14 h-14 mb-6 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃寪</div>
                     <h3 data-i18n="feat-multi-title" class="text-xl font-semibold mb-3 text-slate-100">Multi-language</h3>
                     <p data-i18n="feat-multi-desc" class="text-slate-400 leading-relaxed">Supports both English and Chinese for global users.</p>
                 </div>
 
                 <div class="group p-8 bg-surface border border-border rounded-2xl transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
-                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🔒</div>
+                    <div class="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">馃敀</div>
                     <h3 data-i18n="feat-storage-title" class="text-xl font-semibold mb-3 text-slate-100">Secure Storage</h3>
                     <p data-i18n="feat-storage-desc" class="text-slate-400 leading-relaxed">Your memories are encrypted and stored securely.</p>
                 </div>
@@ -174,10 +208,13 @@
             <a href="terms.html" data-i18n="nav-terms" class="hover:text-primary transition-colors">Terms of Service</a>
             <a href="support.html" data-i18n="nav-support" class="hover:text-primary transition-colors">Support</a>
         </div>
-        <p data-i18n="footer-rights">© 2026 Time Capsule. All rights reserved.</p>
-        <p class="mt-2">
+        <p data-i18n="footer-rights">© 2026 Time Letter. All rights reserved.</p>
+        <p class="mt-2 flex justify-center gap-6 flex-wrap">
             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-                <span data-i18n="footer-icp">陕ICP备2026006122号-1</span>
+                <span data-i18n="footer-icp">闄旾CP澶?026006122鍙?1</span>
+            </a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010402001028" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                <span data-i18n="footer-psb">闄曞叕缃戝畨澶?1010402001028鍙?/span>
             </a>
         </p>
     </footer>
